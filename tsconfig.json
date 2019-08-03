@@ -1,0 +1,12 @@
+{
+  "include": ["./src/**/*"],
+  "exclude": ["./gatsby-*.js", "node_modules"],
+  "compilerOptions": {
+    "target": "esnext",
+    "module": "commonjs",
+    "lib": ["dom", "es2017"],
+    "jsx": "react",
+    "strict": true,
+    "noEmit": true
+  }
+}
