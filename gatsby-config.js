@@ -6,8 +6,15 @@ module.exports = {
   },
   plugins: [
     `gatsby-plugin-typescript`,
+    {
+      resolve: `gatsby-plugin-typography`,
+      options: {
+        pathToConfigModule: `src/utils/typography`,
+      },
+    },
     `gatsby-plugin-eslint`,
     `gatsby-plugin-styled-components`,
+    `gatsby-plugin-polished`,
     `gatsby-plugin-react-helmet`,
     {
       resolve: `gatsby-source-filesystem`,
