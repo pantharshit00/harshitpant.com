@@ -1,0 +1,40 @@
+import * as React from 'react';
+import CoderSvg from './coderSvg';
+import * as L from './styles';
+
+const AboutMeSection = () => {
+  return (
+    <L.Container>
+      <L.Heading>
+        <h1>About Me</h1>
+      </L.Heading>
+      <L.SectionContainer>
+        <L.CoderImgSection>
+          <CoderSvg />
+        </L.CoderImgSection>
+        <L.CoderTextSection>
+          <p id="brief_desc">
+            I started coding with my friends when I was in 6th grade. Over time
+            I learned various technologies and programming concept and started
+            developing my own applications
+          </p>
+          <p id="iuse_desc">
+            I primarily use the following technologies, tools and libraries:
+          </p>
+          <ul>
+            <li>Javascript</li>
+            <li>SQL & NoSQL</li>
+            <li>TypeScript</li>
+            <li>Serverless</li>
+            <li>React</li>
+            <li>Vue</li>
+            <li>GraphQL</li>
+            <li>CI/CD systems</li>
+          </ul>
+        </L.CoderTextSection>
+      </L.SectionContainer>
+    </L.Container>
+  );
+};
+
+export default AboutMeSection;

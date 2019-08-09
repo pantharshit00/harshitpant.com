@@ -4,7 +4,7 @@ import DotSvg from './dotSvg';
 
 export const Section = styled.div`
   display: grid;
-  padding: 8rem 10rem;
+  padding: 6rem 10rem 2rem 10rem;
   grid-template-columns: 300px 1fr;
   column-gap: 1.25rem;
   row-gap: 5rem;
