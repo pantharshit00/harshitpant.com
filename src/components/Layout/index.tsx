@@ -2,10 +2,10 @@ import * as React from 'react';
 import { ThemeProvider } from 'styled-components';
 
 import 'typeface-rubik';
-import '../../fonts/victor-mono/index.css';
+import '@fonts/victor-mono/index.css';
 
+import theme from '@utils/theme';
 import Header from '../Header';
-import theme from '../../utils/theme';
 
 const Layout: React.FC = ({ children }) => {
   return (

@@ -1,7 +1,7 @@
 import * as React from 'react';
+import ProfilePic from '@components/Images/ProfilePic';
 import * as L from './styles';
 import Button from '../Button';
-import ProfilePic from '../Images/ProfilePic';
 
 const ProfileImageHeroSection: React.FC = () => {
   return (

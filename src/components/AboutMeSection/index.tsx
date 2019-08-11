@@ -1,13 +1,15 @@
 import * as React from 'react';
+import * as G from '@components/Shared';
+import SvgBezier from '../SvgBezier';
 import CoderSvg from './coderSvg';
 import * as L from './styles';
 
 const AboutMeSection = () => {
   return (
-    <L.Container>
-      <L.Heading>
+    <G.Container>
+      <G.CenteredHeader>
         <h1>About Me</h1>
-      </L.Heading>
+      </G.CenteredHeader>
       <L.SectionContainer>
         <L.CoderImgSection>
           <CoderSvg />
@@ -33,7 +35,8 @@ const AboutMeSection = () => {
           </ul>
         </L.CoderTextSection>
       </L.SectionContainer>
-    </L.Container>
+      <SvgBezier svgType={1} />
+    </G.Container>
   );
 };
 

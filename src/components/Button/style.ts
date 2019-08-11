@@ -8,4 +8,5 @@ export const Button = styled.button`
   font-size: ${rem('24px')};
   border: none;
   padding: 0.25rem 1.25rem;
+  cursor: pointer;
 `;

@@ -1,20 +1,6 @@
 import styled from 'styled-components';
 import { rem } from 'polished';
 
-export const Container = styled.div`
-  padding: 1rem 6rem;
-`;
-
-export const Heading = styled.div`
-  text-align: center;
-  & > h1 {
-    font-size: ${rem('36px')};
-    color: ${p => p.theme.colors.gray[900]};
-    font-weight: 400;
-  }
-  margin-bottom: 2rem;
-`;
-
 export const SectionContainer = styled.div`
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
