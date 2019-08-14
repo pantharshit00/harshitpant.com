@@ -1,7 +1,7 @@
 // import original module declarations
 import 'styled-components';
 
-export interface ColorChart {
+export interface IColorChart {
   100: string;
   200: string;
   300: string;
@@ -15,13 +15,15 @@ export interface ColorChart {
 
 // and extend them!
 declare module 'styled-components' {
+  // eslint-disable-next-line @typescript-eslint/interface-name-prefix
   export interface DefaultTheme {
     fontFamily: string;
     monoFontFamily: string;
     colors: {
-      gray: ColorChart;
-      green: ColorChart;
-      yellow: ColorChart;
+      gray: IColorChart;
+      green: IColorChart;
+      yellow: IColorChart;
+      blue: IColorChart;
     };
   }
 }

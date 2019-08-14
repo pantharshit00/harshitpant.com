@@ -5,6 +5,7 @@ import SEO from '@components/seo';
 import ProfileImageHeroSection from '@components/ProfileImageHeroSection';
 import AboutMeSection from '@components/AboutMeSection';
 import ProjectShowcase from '@components/ProjectShowcase';
+import BlogPreviewSection from '@components/BlogPreviewSection';
 
 const IndexPage = () => (
   <Layout>
@@ -12,6 +13,7 @@ const IndexPage = () => (
     <ProfileImageHeroSection />
     <AboutMeSection />
     <ProjectShowcase />
+    <BlogPreviewSection />
   </Layout>
 );
 

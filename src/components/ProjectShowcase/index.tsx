@@ -108,7 +108,7 @@ const ProjectShowcase = () => {
   return (
     <L.Container>
       <G.CenteredHeader color={theme.colors.gray[100]}>
-        <h1>Projects I have worked in</h1>
+        <h1>Projects I have worked on</h1>
       </G.CenteredHeader>
       <L.Grid>
         <ProfileCard
