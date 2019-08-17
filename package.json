@@ -7,6 +7,7 @@
   "dependencies": {
     "babel-plugin-polished": "^1.1.0",
     "babel-plugin-styled-components": "^1.10.6",
+    "copy-lite": "^0.1.2",
     "gatsby": "^2.13.45",
     "gatsby-image": "^2.2.7",
     "gatsby-plugin-eslint": "^2.0.5",

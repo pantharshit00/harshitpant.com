@@ -11,7 +11,7 @@ export interface ICenteredHeader {
   fontSize?: string;
 }
 
-export const CenteredHeader = styled.h1<ICenteredHeader>`
+export const CenteredHeader = styled.div<ICenteredHeader>`
   text-align: center;
   & > h1 {
     font-size: ${p => p.fontSize || rem('36px')};
@@ -20,4 +20,11 @@ export const CenteredHeader = styled.h1<ICenteredHeader>`
     margin: 0;
   }
   margin-bottom: 2rem;
+`;
+
+export const SVGSectionWrapper = styled.div`
+  & > svg {
+    height: 100%;
+    width: 100%;
+  }
 `;

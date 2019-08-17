@@ -11,9 +11,9 @@ const AboutMeSection = () => {
         <h1>About Me</h1>
       </G.CenteredHeader>
       <L.SectionContainer>
-        <L.CoderImgSection>
+        <G.SVGSectionWrapper>
           <CoderSvg />
-        </L.CoderImgSection>
+        </G.SVGSectionWrapper>
         <L.CoderTextSection>
           <p id="brief_desc">
             I started coding with my friends when I was in 6th grade. Over time

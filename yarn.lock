@@ -3161,6 +3161,11 @@ copy-descriptor@^0.1.0:
   resolved "https://registry.yarnpkg.com/copy-descriptor/-/copy-descriptor-0.1.1.tgz#676f6eb3c39997c2ee1ac3a924fd6124748f578d"
   integrity sha1-Z29us8OZl8LuGsOpJP1hJHSPV40=
 
+copy-lite@^0.1.2:
+  version "0.1.2"
+  resolved "https://registry.yarnpkg.com/copy-lite/-/copy-lite-0.1.2.tgz#19dc8eea01f0f039feeefe855ee93754723a4c2f"
+  integrity sha512-dj1igABnpUe7WEO6Rs+nEIdmxHvI/n4E7FnlpgKqxcgVmnvs53X1PXGZ37Z3l7hu4O7IjhaVPX4Y9XlCOaG6ww==
+
 copyfiles@^1.2.0:
   version "1.2.0"
   resolved "https://registry.yarnpkg.com/copyfiles/-/copyfiles-1.2.0.tgz#a8da3ac41aa2220ae29bd3c58b6984294f2c593c"
