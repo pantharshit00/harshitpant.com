@@ -5,6 +5,7 @@ import 'typeface-rubik';
 import '@fonts/victor-mono/index.css';
 
 import theme from '@utils/theme';
+import Footer from '../Footer';
 import Header from '../Header';
 
 const Layout: React.FC = ({ children }) => {
@@ -13,6 +14,7 @@ const Layout: React.FC = ({ children }) => {
       <>
         <Header />
         <main>{children}</main>
+        <Footer />
       </>
     </ThemeProvider>
   );
