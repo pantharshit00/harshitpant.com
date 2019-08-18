@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 import { Container as BaseContainer } from '@components/Shared';
 import { rem } from 'polished';
+import media from '@utils/media';
 
 export const Container = styled(BaseContainer)`
   background: ${p => p.theme.colors.green[800]};
@@ -10,6 +11,11 @@ export const Grid = styled.div`
   display: grid;
   color: ${p => p.theme.colors.gray[100]};
   grid-template-columns: 1fr 1fr;
+  ${media.tablet`
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    row-gap: 2rem;
+  `}
 `;
 
 export const LogoSection = styled.div`
@@ -48,6 +54,12 @@ export const LinksSection = styled.div`
       }
     }
   }
+  ${media.tablet`
+  justify-self: auto;
+   grid-template-columns:  1fr 1fr;
+   /* grid-template-rows: 1fr; */
+   margin-left: 1rem;
+  `}
 `;
 
 export const CreditsSection = styled.div`
@@ -55,17 +67,25 @@ export const CreditsSection = styled.div`
   color: ${p => p.theme.colors.gray[100]};
   padding: 0.5rem 3rem;
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 2fr 1fr;
   .credits__techs {
     display: flex;
+    ${media.tablet`
+    margin-top: 1rem;
+    justify-content: space-between;
+  `}
     > div {
       margin-right: 1.2rem;
     }
   }
   .credits__cpright {
     justify-self: end;
+    ${media.tablet`
+    justify-self: center;
+  `}
   }
-  .spacer {
-    flex: 1;
-  }
+  ${media.tablet`
+  grid-template-columns: 1fr;
+  row-gap: 1.5rem;
+  `}
 `;

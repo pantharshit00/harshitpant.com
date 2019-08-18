@@ -6,7 +6,7 @@ import * as L from './styles';
 
 const AboutMeSection = () => {
   return (
-    <G.Container>
+    <L.Container>
       <G.CenteredHeader>
         <h1>About Me</h1>
       </G.CenteredHeader>
@@ -36,7 +36,7 @@ const AboutMeSection = () => {
         </L.CoderTextSection>
       </L.SectionContainer>
       <SvgBezier svgType={1} />
-    </G.Container>
+    </L.Container>
   );
 };
 

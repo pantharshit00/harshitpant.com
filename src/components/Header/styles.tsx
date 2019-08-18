@@ -11,6 +11,9 @@ export const Header = styled.header`
   padding: ${rem('15px')} 5rem;
   box-shadow: 0px 1px 0px rgba(0, 0, 0, 0.05);
   margin-bottom: 1rem;
+  ${media.tablet`
+    padding: ${rem('15px')} 1rem;
+  `}
 `;
 
 export const Logo = styled.h1`

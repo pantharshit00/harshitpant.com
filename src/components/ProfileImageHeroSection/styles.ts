@@ -22,6 +22,11 @@ export const Section = styled.div`
     flex-direction: column;
       padding: 3rem;
    `} 
+   ${media.phablet`
+    display: flex;
+    flex-direction: column;
+      padding: 1.25rem;
+   `} 
 `;
 
 export const DSvg = styled(DotSvg)`
@@ -30,7 +35,7 @@ export const DSvg = styled(DotSvg)`
   left: -15%;
   z-index: -1;
   ${media.tablet`
-     left: calc(50% - 180px);
+     display: none;
   `}
 `;
 
@@ -106,6 +111,19 @@ export const Bezier = styled.div`
   grid-column: span 2;
   margin-left: -10rem;
   margin-right: -10rem;
+    ${media.bigDesktop`
+    margin-left: -8rem;
+  margin-right: -8rem;
+    `}
+  ${media.desktop`
+   margin-left: -6rem;
+  margin-right: -6rem;
+    `}
+   ${media.tablet`
+    margin-left: -3rem;
+  margin-right: -3rem;
+  height: 180px;
+  `}
 `;
 
 export const Button = styled(BaseButton)`

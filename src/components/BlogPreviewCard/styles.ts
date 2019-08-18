@@ -1,21 +1,28 @@
 import styled from 'styled-components';
 import { rem } from 'polished';
+import media from '@utils/media';
 
 export const Container = styled.article`
   display: grid;
   box-shadow: 0px 1px 0px rgba(0, 0, 0, 0.1);
   padding: 1rem;
   padding-bottom: 3rem;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-gap: 1.5rem;
+  grid-template-columns: 1fr 2fr 1fr;
+  column-gap: 4rem;
+  ${media.tablet`
+  grid-template-columns: 2fr 1fr;
+  `}
 `;
 
 export const Header = styled.header`
-  justify-content: flex-end;
+  justify-content: center;
   display: flex;
   flex-direction: column;
   h2 {
     font-size: ${rem('36px')};
+    ${media.bigDesktop`
+      font-size: ${rem('28px')};
+    `}
     font-weight: 500;
     transition: all 0.1s ease-out;
     :hover {
@@ -32,6 +39,9 @@ export const TagsContainer = styled.div`
   display: flex;
   align-items: center;
   font-size: ${rem('18px')};
+  ${media.bigDesktop`
+      font-size: ${rem('16px')};
+    `}
   .tag__container--read {
     margin-right: 1rem;
     color: ${p => p.theme.colors.gray[600]};
@@ -59,5 +69,11 @@ export const ExcerptSection = styled.div`
     font-size: ${rem('18px')};
     line-height: ${rem('28px')};
     color: ${p => p.theme.colors.gray[700]};
+    ${media.bigDesktop`
+      font-size: ${rem('16px')};
+    `}
   }
+  ${media.tablet`
+    display: none;
+  `}
 `;

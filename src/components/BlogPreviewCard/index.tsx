@@ -1,5 +1,5 @@
 import * as React from 'react';
-import ProfileImage from '@components/Images/ProfilePic';
+// import ProfileImage from '@components/Images/ProfilePic';
 import * as L from './styles';
 
 const BlogPreviewCard = () => {
