@@ -1,7 +1,6 @@
 import * as React from 'react';
 import ProfilePic from '@components/Images/ProfilePic';
 import * as L from './styles';
-import Button from '../Button';
 
 const ProfileImageHeroSection: React.FC = () => {
   return (
@@ -23,12 +22,12 @@ const ProfileImageHeroSection: React.FC = () => {
           </L.HeroText>
         </div>
         <div>
-          <Button>
+          <L.Button>
             Say Hi!{' '}
             <span role="img" aria-label="wave">
               👋
             </span>
-          </Button>
+          </L.Button>
         </div>
       </L.TextSection>
       <L.Bezier></L.Bezier>

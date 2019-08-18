@@ -7,7 +7,7 @@ const Image: React.FC<GatsbyImageProps> = props => {
     query ImageQuery {
       placeholderImage: file(relativePath: { eq: "my_picture.png" }) {
         childImageSharp {
-          fluid(maxWidth: 230) {
+          fluid(maxWidth: 230, maxHeight: 300) {
             ...GatsbyImageSharpFluid_withWebp_tracedSVG
           }
         }

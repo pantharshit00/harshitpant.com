@@ -5,7 +5,7 @@ export const Button = styled.button`
   border-radius: ${rem('8px')};
   background-color: ${p => p.theme.colors.green[800]};
   color: ${p => p.theme.colors.gray[100]};
-  font-size: ${rem('24px')};
+  font-size: ${rem('16px')};
   border: none;
   padding: 0.25rem 1.25rem;
   cursor: pointer;

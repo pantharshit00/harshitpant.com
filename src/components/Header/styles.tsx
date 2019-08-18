@@ -1,5 +1,7 @@
 import styled from 'styled-components';
 import { rem } from 'polished';
+import media from '@utils/media';
+import Button from '../Button';
 
 export const Header = styled.header`
   display: grid;
@@ -21,6 +23,9 @@ export const Logo = styled.h1`
 
 export const Nav = styled.nav`
   display: flex;
+  ${media.tablet`
+  display: none;
+    `}
 `;
 
 export const NavA = styled.a`
@@ -33,8 +38,19 @@ export const NavA = styled.a`
   text-decoration: none;
   transition: all 0.7s cubic-bezier(0.075, 0.82, 0.165, 1);
   &:hover,
-  &:focus {
+  &:focus,
+  &:active {
     border-bottom: 1px solid ${p => p.theme.colors.green[800]};
     box-shadow: inset 0 -1.75px 0px 0px ${p => p.theme.colors.green[800]};
   }
+`;
+
+export const MenuButton = styled(Button)`
+  font-size: ${rem('18px')};
+  background: ${p => p.theme.colors.gray[200]};
+  color: ${p => p.theme.colors.gray[800]};
+  display: none;
+  ${media.tablet`
+  display: inline;
+    `}
 `;

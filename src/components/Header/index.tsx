@@ -13,6 +13,7 @@ const Header: React.FC = () => {
         <L.NavA href="#about">About</L.NavA>
         <L.NavA href="/resume">Resume</L.NavA>
       </L.Nav>
+      <L.MenuButton>Menu</L.MenuButton>
     </L.Header>
   );
 };
