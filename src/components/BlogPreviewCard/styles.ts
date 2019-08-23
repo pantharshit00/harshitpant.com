@@ -12,6 +12,9 @@ export const Container = styled.article`
   ${media.tablet`
   grid-template-columns: 2fr 1fr;
   `}
+  ${media.phablet`
+  grid-template-columns: 75% 1fr;
+  `}
 `;
 
 export const Header = styled.header`
@@ -23,7 +26,13 @@ export const Header = styled.header`
     ${media.bigDesktop`
       font-size: ${rem('28px')};
     `}
-    font-weight: 500;
+     ${media.desktop`
+      font-size: ${rem('26px')};
+    `}
+     ${media.phablet`
+      font-size: ${rem('20px')};
+    `}
+    font-weight: 600;
     transition: all 0.1s ease-out;
     :hover {
       opacity: 0.6;

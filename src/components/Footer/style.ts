@@ -72,13 +72,42 @@ export const CreditsSection = styled.div`
     display: flex;
     ${media.tablet`
     margin-top: 1rem;
-    justify-content: space-between;
+  `}
+    ${media.thone`
+   flex-direction: column;
+   align-items: center;
   `}
     > div {
       margin-right: 1.2rem;
+      a {
+        color: inherit;
+        cursor: pointer;
+        font-weight: 600;
+        text-decoration: none;
+        transition: all 0.1s ease;
+        &:hover,
+        &:focus,
+        &:active {
+          text-decoration: underline;
+        }
+      }
     }
   }
   .credits__cpright {
+    ${media.phablet`
+   margin-bottom: 1rem;
+  `}
+    a {
+      color: inherit;
+      cursor: pointer;
+      text-decoration: none;
+      transition: all 0.1s ease;
+      &:hover,
+      &:focus,
+      &:active {
+        text-decoration: underline;
+      }
+    }
     justify-self: end;
     ${media.tablet`
     justify-self: center;

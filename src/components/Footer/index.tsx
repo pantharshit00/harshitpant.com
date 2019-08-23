@@ -37,12 +37,46 @@ const Footer = () => {
       </L.Container>
       <L.CreditsSection>
         <div className="credits__techs">
-          <div>Illustrations by Undraw.co</div>
-          <div>Powered by Gatsby</div>
-          <div>Hosted on Netlify</div>
+          <div>
+            Illustrations by{' '}
+            <a
+              rel="noopener noreferrer"
+              target="_blank"
+              href="https://undraw.co"
+            >
+              Undraw.co
+            </a>
+          </div>
+          <div>
+            Powered by{' '}
+            <a
+              rel="noopener noreferrer"
+              target="_blank"
+              href="https://undraw.co"
+            >
+              Gatsby
+            </a>
+          </div>
+          <div>
+            Hosted on{' '}
+            <a
+              rel="noopener noreferrer"
+              target="_blank"
+              href="https://undraw.co"
+            >
+              Netlify
+            </a>
+          </div>
         </div>
         <div className="credits__cpright">
-          © 2019 Harshit Pant&nbsp; • &nbsp;Source
+          © 2019 Harshit Pant&nbsp; • &nbsp;
+          <a
+            rel="noopener noreferrer"
+            target="_blank"
+            href="https://github.com/pantharshit00/harshitpant.com"
+          >
+            Source
+          </a>
         </div>
       </L.CreditsSection>
     </>

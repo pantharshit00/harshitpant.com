@@ -1,6 +1,7 @@
 import * as React from 'react';
 import styled from 'styled-components';
 import { rem } from 'polished';
+import media from '@utils/media';
 // import { copyToClipboard } from 'copy-lite';
 
 const ClipboardSVG: React.FC<React.SVGProps<SVGSVGElement>> = props => (
@@ -30,6 +31,9 @@ const EmailFormContainer = styled.div`
   border-radius: ${rem('9px')};
   .spacer {
     flex: 1;
+    ${media.desktop`
+   margin: 0 1rem;
+  `}
   }
   h4 {
     font-weight: 400;

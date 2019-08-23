@@ -124,6 +124,10 @@ export const Bezier = styled.div`
   margin-right: -3rem;
   height: 180px;
   `}
+  ${media.phablet`
+    margin-left: -1rem;
+    margin-right: -1rem;
+  `}
 `;
 
 export const Button = styled(BaseButton)`
