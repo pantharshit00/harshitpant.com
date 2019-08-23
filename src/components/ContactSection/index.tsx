@@ -37,7 +37,13 @@ const ContactSection: React.FC = () => {
                 Twitter
               </a>
             </span>
-            <TwitterIcon />
+            <a
+              href="https://twitter.com/pantharshit00"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <TwitterIcon />
+            </a>
           </L.TwitterDMSection>
         </L.ContactFormSection>
         <G.SVGSectionWrapper>

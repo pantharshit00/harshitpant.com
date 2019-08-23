@@ -11,8 +11,20 @@ const Footer = () => {
           <L.LogoSection>
             <h3>hP</h3>
             <div className="logosection__logos">
-              <GithubSpectrumIcon />
-              <TwitterIcon />
+              <a
+                href="https://github.com/pantharshit00"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <GithubSpectrumIcon />
+              </a>
+              <a
+                href="https://twitter.com/pantharshit00"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <TwitterIcon />
+              </a>
             </div>
           </L.LogoSection>
           <L.LinksSection>

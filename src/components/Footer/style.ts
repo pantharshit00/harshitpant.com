@@ -28,6 +28,10 @@ export const LogoSection = styled.div`
   }
   .logosection__logos {
     padding: 0.5rem;
+    a {
+      color: inherit;
+      cursor: pointer;
+    }
     svg {
       height: 30px;
       width: 30px;

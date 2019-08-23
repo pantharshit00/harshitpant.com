@@ -41,11 +41,19 @@ export const TwitterDMSection = styled.div`
   display: flex;
   align-items: center;
   color: ${p => p.theme.colors.gray[900]};
-  a {
+  span a {
     color: ${p => p.theme.colors.gray[900]};
     text-decoration: none;
     border-bottom: 1px solid #38a1f3;
     box-shadow: inset 0 -1px 0px 0px #38a1f3;
+  }
+  > a {
+    height: 40px;
+    width: 40px;
+    svg {
+      height: 100%;
+      width: 100%;
+    }
   }
   svg {
     fill: #38a1f3;
