@@ -4,7 +4,7 @@ import { rem } from 'polished';
 
 export const SectionContainer = styled.div`
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   grid-gap: 5rem;
 `;
 
@@ -35,7 +35,7 @@ export const CoderTextSection = styled.div`
     display: grid;
     margin-left: 0.75rem;
     list-style: none;
-    grid-template-columns: minmax(150px, 180px) minmax(150px, 180px);
+    grid-template-columns: minmax(120px, 180px) minmax(120px, 180px);
     li {
       font-size: ${rem('18px')};
       color: ${p => p.theme.colors.gray[700]};

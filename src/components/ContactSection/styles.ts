@@ -36,6 +36,9 @@ export const ContactFormSection = styled.div`
 
 export const TwitterDMSection = styled.div`
   font-size: ${rem('22px')};
+  ${media.phone`
+      font-size: ${rem('18px')};
+     `}
   font-weight: 300;
   margin-top: 6rem;
   display: flex;
