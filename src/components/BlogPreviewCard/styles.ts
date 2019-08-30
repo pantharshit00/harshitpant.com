@@ -9,7 +9,7 @@ export const Container = styled.article`
   padding-bottom: 3rem;
   grid-template-columns: 1fr 2fr 1fr;
   column-gap: 4rem;
-  ${media.tablet`
+  ${media.desktop`
   grid-template-columns: 2fr 1fr;
   `}
   ${media.phablet`
@@ -75,6 +75,7 @@ export const TagsContainer = styled.div`
 
 export const ExcerptSection = styled.div`
   p {
+    word-break: break-all;
     font-size: ${rem('18px')};
     line-height: ${rem('28px')};
     color: ${p => p.theme.colors.gray[700]};
@@ -82,7 +83,7 @@ export const ExcerptSection = styled.div`
       font-size: ${rem('16px')};
     `}
   }
-  ${media.tablet`
+  ${media.desktop`
     display: none;
   `}
 `;

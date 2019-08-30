@@ -1,32 +1,50 @@
 import * as React from 'react';
 // import ProfileImage from '@components/Images/ProfilePic';
+import Image from 'gatsby-image';
 import * as L from './styles';
 
-const BlogPreviewCard = () => {
+export interface IBlogPreviewCardProps {
+  title: string;
+  readTime: number;
+  excerpt: string;
+  coverImage: any;
+  slug: string;
+  tags: string[];
+}
+
+const BlogPreviewCard: React.FC<IBlogPreviewCardProps> = ({
+  title,
+  readTime,
+  excerpt,
+  coverImage,
+  tags,
+  slug,
+}) => {
   return (
     <L.Container>
       <L.Header>
         <h2>
-          <a href="/link-to-article">
-            JSON Web Token Authentication in React and react-router
-          </a>
+          <a href={`/blog${slug}`}>{title}</a>
         </h2>
         <L.TagsContainer>
-          <div className="tag__container--read">30 minute read</div>
+          <div className="tag__container--read">
+            {readTime} minute{readTime > 1 ? 's' : ''} read
+          </div>
           <div className="tag__container--tags">
-            <a href="/react">#react</a>
-            <a href="/auth">#auth</a>
+            {tags.map(tag => (
+              <a key={`tag-${title}-${tag}`} href={`/tag/${tag}`}>
+                #{tag}
+              </a>
+            ))}
           </div>
         </L.TagsContainer>
       </L.Header>
       <L.ExcerptSection>
-        <p>
-          In a previous blog I showed you guys how to make a JSON Web Token
-          Authentication Server. You can find that article here. Now in this
-          blog post I am going to show [...]
-        </p>
+        <p>{excerpt}</p>
       </L.ExcerptSection>
-      <div>{/* <ProfileImage /> */}</div>
+      <div>
+        <Image fluid={coverImage} />
+      </div>
     </L.Container>
   );
 };

@@ -14,12 +14,10 @@ const ProfileImageHeroSection: React.FC = () => {
           <L.YellowH6>Hi, I{"'"}m</L.YellowH6>
         </div>
         <div>
-          <L.HeroH1>Harshit Pant</L.HeroH1>
+          <L.HeroH1>Harshit Pant.</L.HeroH1>
         </div>
         <div>
-          <L.HeroText>
-            I am a fullstack software engineer from the Himalayas
-          </L.HeroText>
+          <L.HeroText>I am a software engineer from the Himalayas.</L.HeroText>
         </div>
         <div>
           <L.Button>
