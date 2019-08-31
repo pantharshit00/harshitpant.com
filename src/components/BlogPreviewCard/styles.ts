@@ -11,9 +11,11 @@ export const Container = styled.article`
   column-gap: 4rem;
   ${media.desktop`
   grid-template-columns: 2fr 1fr;
+  column-gap: 2rem;
   `}
   ${media.phablet`
-  grid-template-columns: 75% 1fr;
+  grid-template-columns: 65% 1fr;
+  column-gap: 0.25rem;
   `}
 `;
 

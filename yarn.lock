@@ -5696,6 +5696,13 @@ gatsby-plugin-styled-components@^3.1.2:
   dependencies:
     "@babel/runtime" "^7.0.0"
 
+gatsby-plugin-twitter@^2.1.4:
+  version "2.1.4"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-twitter/-/gatsby-plugin-twitter-2.1.4.tgz#753d2cc7f1045d088e41c5970071855067cbcf27"
+  integrity sha512-G+yvRUQ3xvUEJ8lVgQaGolcGo2Fg4f5F8iMcEleZ9aMyO/zi29NAym/3aQcPr4HhWl9ATCKCnz856dvGuOJ4pw==
+  dependencies:
+    "@babel/runtime" "^7.5.5"
+
 gatsby-plugin-typescript@^2.1.2:
   version "2.1.2"
   resolved "https://registry.yarnpkg.com/gatsby-plugin-typescript/-/gatsby-plugin-typescript-2.1.2.tgz#a9694c3dd4dc1a4c81b1578dbb242e43d9ace0f3"
@@ -5730,10 +5737,10 @@ gatsby-remark-embedder@^1.1.2:
     node-fetch "^2.6.0"
     unist-util-visit "^1.4.0"
 
-gatsby-remark-images@^3.1.18:
-  version "3.1.18"
-  resolved "https://registry.yarnpkg.com/gatsby-remark-images/-/gatsby-remark-images-3.1.18.tgz#e5e853042cc60adffdf9194f421e84da40b90272"
-  integrity sha512-LWoT3r3zLiJI/uaULEl4QpfS2fADY5vfyNaWj85IccvWTVPhMSHHseWw3Mu0pP1YDsuKrtfrYXrmg0n508SKig==
+gatsby-remark-images@^3.1.19:
+  version "3.1.19"
+  resolved "https://registry.yarnpkg.com/gatsby-remark-images/-/gatsby-remark-images-3.1.19.tgz#1ad1493cb9dbd7b1917895d73fd2ddd30edb98af"
+  integrity sha512-18vu9FqbfzV38UFdraSuYYamF3JL0Dwy7kS3MJuRuWuhSOeD7X2D0icYKaqhKPfL1370dd5zE1xaWVXxbS43eQ==
   dependencies:
     "@babel/runtime" "^7.5.5"
     chalk "^2.4.2"

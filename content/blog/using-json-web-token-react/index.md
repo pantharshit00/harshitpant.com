@@ -90,7 +90,7 @@ ReactDOM.render(
 
 You should see the Welcome to React just as before but now it is wrapped inside react router.
 
-![welcome_to_react](/content/images/2017/08/welcome.png)
+![welcome_to_react](./welcome.png)
 
 ---
 
