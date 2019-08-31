@@ -7,6 +7,8 @@ import BaseButton from '../Button';
 export const Section = styled.div`
   display: grid;
   padding: 6rem 10rem 2rem 10rem;
+  margin: 0 auto;
+  max-width: 1330px;
   grid-template-columns: 300px 1fr;
   column-gap: 1.25rem;
   row-gap: 5rem;
@@ -108,26 +110,7 @@ export const Bezier = styled.div`
   background: url("${lineBezierSvg}");
   background-size: 2919.084px 254.702px;
   height: 254.702px;
-  grid-column: span 2;
-  margin-left: -10rem;
-  margin-right: -10rem;
-    ${media.bigDesktop`
-    margin-left: -8rem;
-  margin-right: -8rem;
-    `}
-  ${media.desktop`
-   margin-left: -6rem;
-  margin-right: -6rem;
-    `}
-   ${media.tablet`
-    margin-left: -3rem;
-  margin-right: -3rem;
-  height: 180px;
-  `}
-  ${media.phablet`
-    margin-left: -1rem;
-    margin-right: -1rem;
-  `}
+  margin-top: 3rem;  
 `;
 
 export const Button = styled(BaseButton)`

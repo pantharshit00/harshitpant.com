@@ -6,6 +6,8 @@ export const SectionContainer = styled.div`
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   grid-gap: 5rem;
+  margin: 0 auto;
+  max-width: 1330px;
 `;
 
 export const Container = styled(BaseContainer)`

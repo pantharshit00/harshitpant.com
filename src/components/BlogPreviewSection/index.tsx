@@ -8,7 +8,12 @@ const BlogPreviewSection: React.FC<{ data: any }> = ({ data }) => {
       <G.CenteredHeader>
         <h1>Blog</h1>
       </G.CenteredHeader>
-      <div>
+      <div
+        style={{
+          margin: '0 auto',
+          maxWidth: '1330px',
+        }}
+      >
         {data.map((blog: any) => (
           <BlogPreviewCard
             key={blog.id}

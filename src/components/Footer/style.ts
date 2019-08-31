@@ -9,6 +9,8 @@ export const Container = styled(BaseContainer)`
 
 export const Grid = styled.div`
   display: grid;
+  margin: 0 auto;
+  max-width: 1330px;
   color: ${p => p.theme.colors.gray[100]};
   grid-template-columns: 1fr 1fr;
   ${media.tablet`
@@ -70,12 +72,21 @@ export const CreditsSection = styled.div`
   background: ${p => p.theme.colors.green[900]};
   color: ${p => p.theme.colors.gray[100]};
   padding: 0.5rem 3rem;
-  display: grid;
-  grid-template-columns: 2fr 1fr;
+  .credits__grid {
+    margin: 0 auto;
+    max-width: 1330px;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    ${media.tablet`
+  grid-template-columns: 1fr;
+  row-gap: 1.5rem;
+  `}
+  }
   .credits__techs {
     display: flex;
     ${media.tablet`
     margin-top: 1rem;
+    justify-self: center;
   `}
     ${media.thone`
    flex-direction: column;
@@ -117,8 +128,4 @@ export const CreditsSection = styled.div`
     justify-self: center;
   `}
   }
-  ${media.tablet`
-  grid-template-columns: 1fr;
-  row-gap: 1.5rem;
-  `}
 `;

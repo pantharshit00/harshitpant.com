@@ -4,11 +4,13 @@ import { Container as BaseContainer } from '@components/Shared';
 import media from '@utils/media';
 
 export const Container = styled(BaseContainer)`
-  padding-bottom: 7rem;
+  padding-bottom: 12rem;
 `;
 
 export const Grid = styled.div`
   display: grid;
+  margin: 0 auto;
+  max-width: 1330px;
   grid-template-columns: 35% 1fr;
   grid-gap: 3rem;
   ${media.desktop`

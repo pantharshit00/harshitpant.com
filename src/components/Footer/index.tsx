@@ -48,47 +48,49 @@ const Footer = () => {
         </L.Grid>
       </L.Container>
       <L.CreditsSection>
-        <div className="credits__techs">
-          <div>
-            Illustrations by{' '}
+        <div className="credits__grid">
+          <div className="credits__techs">
+            <div>
+              Illustrations by{' '}
+              <a
+                rel="noopener noreferrer"
+                target="_blank"
+                href="https://undraw.co"
+              >
+                Undraw.co
+              </a>
+            </div>
+            <div>
+              Powered by{' '}
+              <a
+                rel="noopener noreferrer"
+                target="_blank"
+                href="https://undraw.co"
+              >
+                Gatsby
+              </a>
+            </div>
+            <div>
+              Hosted on{' '}
+              <a
+                rel="noopener noreferrer"
+                target="_blank"
+                href="https://undraw.co"
+              >
+                Netlify
+              </a>
+            </div>
+          </div>
+          <div className="credits__cpright">
+            © 2019 Harshit Pant&nbsp; • &nbsp;
             <a
               rel="noopener noreferrer"
               target="_blank"
-              href="https://undraw.co"
+              href="https://github.com/pantharshit00/harshitpant.com"
             >
-              Undraw.co
+              Source
             </a>
           </div>
-          <div>
-            Powered by{' '}
-            <a
-              rel="noopener noreferrer"
-              target="_blank"
-              href="https://undraw.co"
-            >
-              Gatsby
-            </a>
-          </div>
-          <div>
-            Hosted on{' '}
-            <a
-              rel="noopener noreferrer"
-              target="_blank"
-              href="https://undraw.co"
-            >
-              Netlify
-            </a>
-          </div>
-        </div>
-        <div className="credits__cpright">
-          © 2019 Harshit Pant&nbsp; • &nbsp;
-          <a
-            rel="noopener noreferrer"
-            target="_blank"
-            href="https://github.com/pantharshit00/harshitpant.com"
-          >
-            Source
-          </a>
         </div>
       </L.CreditsSection>
     </>
