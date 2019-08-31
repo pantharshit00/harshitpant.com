@@ -118,10 +118,10 @@ const ProjectShowcase = () => {
             {
               text: 'React',
               color: '#63B3ED',
-              textColor: '#2C5282',
+              textColor: '#1B3082',
             },
             // { text: 'Node', color: '#68D391', textColor: '#276749' },
-            { text: 'GraphQL  ', color: '#F687B3', textColor: '#97266D' },
+            { text: 'GraphQL  ', color: '#F687B3', textColor: '#5E266D' },
           ]}
           texts={[
             'Built a fullstack server side rendered GraphQL ecommerce store',
@@ -138,9 +138,9 @@ const ProjectShowcase = () => {
             {
               text: 'Typescript',
               color: '#63B3ED',
-              textColor: '#2C5282',
+              textColor: '#1B3082',
             },
-            { text: 'Go', color: '#B2F5EA', textColor: '#2B6CB0' },
+            { text: 'Go', color: '#B2F5EA', textColor: '#2B66B0' },
           ]}
           texts={[
             'My current project. I am mainly responsible for Developer Success ',
@@ -157,9 +157,9 @@ const ProjectShowcase = () => {
             {
               text: 'React',
               color: '#63B3ED',
-              textColor: '#2C5282',
+              textColor: '#1B3082',
             },
-            { text: 'GraphQL  ', color: '#F687B3', textColor: '#97266D' },
+            { text: 'GraphQL  ', color: '#F687B3', textColor: '#5E266D' },
           ]}
           texts={[
             'Contributed to two big React JS projects.',
