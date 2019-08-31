@@ -22,6 +22,10 @@ export const Logo = styled.h1`
   font-size: ${rem('28px')};
   margin-bottom: 0;
   color: ${p => p.theme.colors.gray[700]};
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
 `;
 
 export const Nav = styled.nav`

@@ -11,7 +11,9 @@ const Header: React.FC = () => {
     >
       <L.Header>
         <div>
-          <L.Logo>hP</L.Logo>
+          <L.Logo>
+            <a href="/">hP</a>
+          </L.Logo>
         </div>
         <L.Nav>
           <L.NavA href="#contact">Contact</L.NavA>

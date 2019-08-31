@@ -65,7 +65,7 @@ const Footer = () => {
               <a
                 rel="noopener noreferrer"
                 target="_blank"
-                href="https://undraw.co"
+                href="https://gatsbyjs.org"
               >
                 Gatsby
               </a>
@@ -75,7 +75,7 @@ const Footer = () => {
               <a
                 rel="noopener noreferrer"
                 target="_blank"
-                href="https://undraw.co"
+                href="https://netlify.com"
               >
                 Netlify
               </a>
