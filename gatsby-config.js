@@ -65,10 +65,10 @@ module.exports = {
             resolve: `gatsby-remark-prismjs`,
             options: {
               classPrefix: "language-",
-              inlineCodeMarker: null,
+              inlineCodeMarker: true,
               aliases: {},
               showLineNumbers: true,
-              noInlineHighlight: true
+              noInlineHighlight: false
             }
           },
           { resolve: "gatsby-remark-embedder" }

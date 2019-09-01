@@ -1,14 +1,39 @@
 import * as React from 'react';
 import Layout from '@components/Layout';
 import { MDXRenderer } from 'gatsby-plugin-mdx';
-import { graphql } from 'gatsby';
+import { graphql, Link } from 'gatsby';
+import Img from 'gatsby-image';
 import * as L from './styles';
 
 const BlogPost: React.FC<any> = ({ data }) => {
+  const post = data.mdx;
+  const tag =
+    post.frontmatter.tags.length > 0
+      ? post.frontmatter.tags[0]
+      : 'uncategorized';
   return (
     <Layout>
       <L.Container>
-        <MDXRenderer>{data.mdx.body}</MDXRenderer>
+        <L.Header>
+          <div className="post__meta">
+            <span className="date">{post.frontmatter.date}</span>
+            <span className="divider">/</span>
+            <Link to={`/tag/${tag}`} className="tag">
+              {tag}
+            </Link>
+          </div>
+          <h1 className="post__title">{post.frontmatter.title}</h1>
+        </L.Header>
+        <L.HeroContainer>
+          <Img
+            style={{ zIndex: -1 }}
+            fluid={post.frontmatter.cover.childImageSharp.fluid}
+          />
+        </L.HeroContainer>
+
+        <L.ArticleSection>
+          <MDXRenderer>{data.mdx.body}</MDXRenderer>
+        </L.ArticleSection>
       </L.Container>
     </Layout>
   );
@@ -27,6 +52,14 @@ export const pageQuery = graphql`
       frontmatter {
         title
         tags
+        date(formatString: "DD MMMM YYYY")
+        cover {
+          childImageSharp {
+            fluid(maxWidth: 1920) {
+              ...GatsbyImageSharpFluid_withWebp_tracedSVG
+            }
+          }
+        }
       }
       fields {
         slug

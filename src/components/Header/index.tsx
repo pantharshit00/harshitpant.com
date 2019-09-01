@@ -4,12 +4,7 @@ import * as L from './styles';
 
 const Header: React.FC = () => {
   return (
-    <div
-      style={{
-        margin: '0 auto',
-        maxWidth: '1550px',
-      }}
-    >
+    <L.Container>
       <L.Header>
         <div>
           <L.Logo>
@@ -24,7 +19,7 @@ const Header: React.FC = () => {
         </L.Nav>
         <L.MenuButton>Menu</L.MenuButton>
       </L.Header>
-    </div>
+    </L.Container>
   );
 };
 

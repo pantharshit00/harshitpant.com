@@ -17,6 +17,22 @@ const typography = new Typography({
   baseFontSize: '16px',
   headerFontFamily: fonts,
   bodyFontFamily: fonts,
+  overrideStyles: ({ rhythm }) => ({
+    'h1,h2,h3,h4,h5,h6': {
+      lineHeight: 1,
+      fontWeight: 500,
+    },
+    'h1,h2,h3,h4': {
+      lineHeight: 1.25,
+      marginTop: rhythm(1),
+      marginBottom: rhythm(1 / 2),
+      letterSpacing: '-0.04rem',
+    },
+    code: {
+      fontFamily: `"Victor Mono",SFMono-Regular,Consolas,"Liberation Mono",Menlo,Courier,monospace;`,
+      fontWeight: 500,
+    },
+  }),
 });
 
 export const { scale, rhythm, options } = typography;

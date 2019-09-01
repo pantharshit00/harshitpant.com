@@ -3,6 +3,11 @@ import { rem } from 'polished';
 import media from '@utils/media';
 import Button from '../Button';
 
+export const Container = styled.div`
+  margin: 0 auto;
+  max-width: 1550px;
+`;
+
 export const Header = styled.header`
   display: grid;
   position: relative;
@@ -20,7 +25,7 @@ export const Logo = styled.h1`
   font-family: 'Victor Mono', Rubik, sans-serif;
   font-weight: 600;
   font-size: ${rem('28px')};
-  margin-bottom: 0;
+  margin: 0;
   color: ${p => p.theme.colors.gray[700]};
   a {
     color: inherit;
