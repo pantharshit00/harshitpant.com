@@ -71,10 +71,15 @@ module.exports = {
               noInlineHighlight: false
             }
           },
-          { resolve: "gatsby-remark-embedder" }
-        ]
+          { resolve: "gatsby-remark-copy-linked-files" },
+          { resolve: "gatsby-remark-embedder" },
+
+          { resolve: `gatsby-remark-smartypants` },
+          { resolve: 'gatsby-remark-autolink-headers'},
+        ],
       }
     },
+    'gatsby-remark-autolink-headers',
     {
       resolve: "gatsby-remark-images",
       options: {

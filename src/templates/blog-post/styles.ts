@@ -65,12 +65,22 @@ export const ArticleSection = styled.div`
   }
   font-size: ${rem('22px')};
   line-height: 2.2rem;
-  a {
+  a:not(.anchor) {
     color: inherit;
     text-decoration-color: ${p => p.theme.colors.blue[600]};
     transition: all 0.2s ease-in-out;
     :hover {
       background: ${p => p.theme.colors.blue[400]};
     }
+  }
+  a.anchor {
+    color: inherit;
+    fill: #a0aec0;
+    text-decoration: none;
+    border-bottom: none;
+    box-shadow: none;
+  }
+  a.anchor:hover {
+    background: none;
   }
 `;

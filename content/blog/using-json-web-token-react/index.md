@@ -227,7 +227,7 @@ ReactDOM.render(
 
 Now go to [http://localhost:3000/login](http://localhost:3000/login) and you should see login page like this.
 
-![login_page](/content/images/2017/08/login.png)
+![login_page](./login.png)
 
 ---
 
@@ -538,4 +538,4 @@ There are hard coded user in the server
     username: test2
     password: asdf12345
 
-![JWT_GIF](/content/images/2017/08/JWT.gif)
+![JWT_GIF](./JWT.gif)

@@ -5750,6 +5750,31 @@ gatsby-react-router-scroll@^2.1.3:
     scroll-behavior "^0.9.9"
     warning "^3.0.0"
 
+gatsby-remark-autolink-headers@^2.1.9:
+  version "2.1.9"
+  resolved "https://registry.yarnpkg.com/gatsby-remark-autolink-headers/-/gatsby-remark-autolink-headers-2.1.9.tgz#823011336ba8aa0209e26bd738c125c0c36dd468"
+  integrity sha512-8prtaCg45afcog0G6Eua+xNahzfpLl4UBM8b/oF3SaCKr0ifXrZ+oy5ah+m48tHOWC0StIxXYQ7xm2NoEicS2A==
+  dependencies:
+    "@babel/runtime" "^7.5.5"
+    github-slugger "^1.2.1"
+    lodash "^4.17.15"
+    mdast-util-to-string "^1.0.6"
+    unist-util-visit "^1.4.1"
+
+gatsby-remark-copy-linked-files@^2.1.14:
+  version "2.1.14"
+  resolved "https://registry.yarnpkg.com/gatsby-remark-copy-linked-files/-/gatsby-remark-copy-linked-files-2.1.14.tgz#74ef1b567f511bc4c55da535bd7a8bcba91d0d97"
+  integrity sha512-JNFX3dIit069FMRT2sir8wiHjHzx4TDqK4GYIiw9DK5Y04xdkEzL496lMpmBHMM8yzkzO1JRY51g1RJGBQnqvA==
+  dependencies:
+    "@babel/runtime" "^7.5.5"
+    cheerio "^1.0.0-rc.3"
+    fs-extra "^8.1.0"
+    is-relative-url "^3.0.0"
+    lodash "^4.17.15"
+    path-is-inside "^1.0.2"
+    probe-image-size "^4.1.1"
+    unist-util-visit "^1.4.1"
+
 gatsby-remark-embedder@^1.1.2:
   version "1.1.2"
   resolved "https://registry.yarnpkg.com/gatsby-remark-embedder/-/gatsby-remark-embedder-1.1.2.tgz#7558464096c561d9a068488b12fecb11814186a5"
@@ -5783,6 +5808,16 @@ gatsby-remark-prismjs@^3.3.11:
   dependencies:
     "@babel/runtime" "^7.5.5"
     parse-numeric-range "^0.0.2"
+    unist-util-visit "^1.4.1"
+
+gatsby-remark-smartypants@^2.1.6:
+  version "2.1.6"
+  resolved "https://registry.yarnpkg.com/gatsby-remark-smartypants/-/gatsby-remark-smartypants-2.1.6.tgz#446bdabc25a1058830539dc328130442cbef552b"
+  integrity sha512-FgcX2mZ4HeiorXrV3vgVjvAMgdKp8gg2UhNgHv9kNMs2sm4qVHBUi+PiKk5E6UkbkB0ggQB1m3ieh9BvVjUSHg==
+  dependencies:
+    "@babel/runtime" "^7.5.5"
+    retext "^5.0.0"
+    retext-smartypants "^3.0.3"
     unist-util-visit "^1.4.1"
 
 gatsby-source-filesystem@^2.1.7:
@@ -7087,7 +7122,7 @@ is-binary-path@^1.0.0:
   dependencies:
     binary-extensions "^1.0.0"
 
-is-buffer@^1.1.5, is-buffer@~1.1.1:
+is-buffer@^1.1.4, is-buffer@^1.1.5, is-buffer@~1.1.1:
   version "1.1.6"
   resolved "https://registry.yarnpkg.com/is-buffer/-/is-buffer-1.1.6.tgz#efaa2ea9daa0d7ab2ea13a97b2b8ad51fefbe8be"
   integrity sha512-NcdALwpXkTm5Zvvbk7owOUSvVvBKDgKP5/ewfXEznmQFfs4ZRmanOeKBTjRVjka3QFoN6XJ+9F3USqfHqTaU5w==
@@ -10144,7 +10179,7 @@ private@^0.1.6:
   resolved "https://registry.yarnpkg.com/private/-/private-0.1.8.tgz#2381edb3689f7a53d653190060fcf822d2f368ff"
   integrity sha512-VvivMrbvd2nKkiG38qjULzlc+4Vx4wm/whI9pQD35YrARNnhxeiRktSOhSukRLFNlzg6Br/cJPet5J/u19r/mg==
 
-probe-image-size@^4.0.0:
+probe-image-size@^4.0.0, probe-image-size@^4.1.1:
   version "4.1.1"
   resolved "https://registry.yarnpkg.com/probe-image-size/-/probe-image-size-4.1.1.tgz#c836c53154b6dd04dbcf66af2bbd50087b15e1dc"
   integrity sha512-42LqKZqTLxH/UvAZ2/cKhAsR4G/Y6B7i7fI2qtQu9hRBK4YjS6gqO+QRtwTjvojUx4+/+JuOMzLoFyRecT9qRw==
@@ -10996,6 +11031,38 @@ retext-english@^3.0.3:
   dependencies:
     parse-english "^4.0.0"
     unherit "^1.0.4"
+
+retext-latin@^2.0.0:
+  version "2.0.3"
+  resolved "https://registry.yarnpkg.com/retext-latin/-/retext-latin-2.0.3.tgz#38dd8a42a96fb02a38e077e02f041ad7e67ee094"
+  integrity sha512-YIOkXHopF4wmag2X3X0xC+H2hT3qzl24FyoGLVGXRUzT8qxOWPCOBiJO94FmXYofhZbiiNqjcU98xWXouxAcLw==
+  dependencies:
+    parse-latin "^4.0.0"
+    unherit "^1.0.4"
+
+retext-smartypants@^3.0.3:
+  version "3.0.3"
+  resolved "https://registry.yarnpkg.com/retext-smartypants/-/retext-smartypants-3.0.3.tgz#9c982dcc210ae3bb36f4bc46aae802798fce43f9"
+  integrity sha512-/0fIipYayOvvucn3yjxvWwyT9P6p8gbpqdqUQNs1+L7av2hxatmiA9sk+fygJSDn5OXRyhBzcezvTbEmEabfIQ==
+  dependencies:
+    nlcst-to-string "^2.0.0"
+    unist-util-visit "^1.0.0"
+
+retext-stringify@^2.0.0:
+  version "2.0.3"
+  resolved "https://registry.yarnpkg.com/retext-stringify/-/retext-stringify-2.0.3.tgz#d39a258c4da42fc8d05abcdcf8327fdfb1558571"
+  integrity sha512-VjOkvUI8MPILdJVwhJH74d+j0iCCbcR1M3fH7xJ0BGl/Ir7H6XEvS8cB9RS6zC/GfSXX+DDXyLmh7FnL0FL0Fw==
+  dependencies:
+    nlcst-to-string "^2.0.0"
+
+retext@^5.0.0:
+  version "5.0.0"
+  resolved "https://registry.yarnpkg.com/retext/-/retext-5.0.0.tgz#5d9018c4a677d6103c142362d76f50eb1d398bf6"
+  integrity sha1-XZAYxKZ31hA8FCNi129Q6x05i/Y=
+  dependencies:
+    retext-latin "^2.0.0"
+    retext-stringify "^2.0.0"
+    unified "^6.0.0"
 
 retry@^0.12.0:
   version "0.12.0"
@@ -12522,6 +12589,18 @@ unified@8.3.2, unified@^8.3.2:
     trough "^1.0.0"
     vfile "^4.0.0"
 
+unified@^6.0.0:
+  version "6.2.0"
+  resolved "https://registry.yarnpkg.com/unified/-/unified-6.2.0.tgz#7fbd630f719126d67d40c644b7e3f617035f6dba"
+  integrity sha512-1k+KPhlVtqmG99RaTbAv/usu85fcSRu3wY8X+vnsEhIxNP5VbVIDiXnLqyKIG+UMdyTg0ZX9EI6k2AfjJkHPtA==
+  dependencies:
+    bail "^1.0.0"
+    extend "^3.0.0"
+    is-plain-obj "^1.1.0"
+    trough "^1.0.0"
+    vfile "^2.0.0"
+    x-is-string "^0.1.0"
+
 unified@^7.0.0:
   version "7.1.0"
   resolved "https://registry.yarnpkg.com/unified/-/unified-7.1.0.tgz#5032f1c1ee3364bd09da12e27fdd4a7553c7be13"
@@ -12926,6 +13005,16 @@ vfile-message@^2.0.0:
   dependencies:
     "@types/unist" "^2.0.2"
     unist-util-stringify-position "^2.0.0"
+
+vfile@^2.0.0:
+  version "2.3.0"
+  resolved "https://registry.yarnpkg.com/vfile/-/vfile-2.3.0.tgz#e62d8e72b20e83c324bc6c67278ee272488bf84a"
+  integrity sha512-ASt4mBUHcTpMKD/l5Q+WJXNtshlWxOogYyGYYrg4lt/vuRjC1EFQtlAofL5VmtVNIZJzWYFJjzGWZ0Gw8pzW1w==
+  dependencies:
+    is-buffer "^1.1.4"
+    replace-ext "1.0.0"
+    unist-util-stringify-position "^1.0.0"
+    vfile-message "^1.0.0"
 
 vfile@^3.0.0:
   version "3.0.1"

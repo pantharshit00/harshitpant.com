@@ -380,7 +380,7 @@ In this snippet first we are bringing in our store to our application using some
 
 # Result
 
-// GIF here
+![apollo_example_gif](./apollo.gif)
 
 ---
 
