@@ -61,6 +61,16 @@ module.exports = {
               linkImagesToOriginal: false
             }
           },
+          {
+            resolve: `gatsby-remark-prismjs`,
+            options: {
+              classPrefix: "language-",
+              inlineCodeMarker: null,
+              aliases: {},
+              showLineNumbers: true,
+              noInlineHighlight: true
+            }
+          },
           { resolve: "gatsby-remark-embedder" }
         ]
       }

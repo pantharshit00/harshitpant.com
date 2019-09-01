@@ -3,6 +3,7 @@ import { ThemeProvider } from 'styled-components';
 
 import 'typeface-rubik';
 import '@fonts/victor-mono/index.css';
+import '@utils/prism-theme.css';
 
 import theme from '@utils/theme';
 import Footer from '../Footer';

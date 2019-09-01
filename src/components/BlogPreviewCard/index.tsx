@@ -1,6 +1,7 @@
 import * as React from 'react';
 // import ProfileImage from '@components/Images/ProfilePic';
 import Image from 'gatsby-image';
+import { Link } from 'gatsby';
 import * as L from './styles';
 
 export interface IBlogPreviewCardProps {
@@ -24,7 +25,7 @@ const BlogPreviewCard: React.FC<IBlogPreviewCardProps> = ({
     <L.Container>
       <L.Header>
         <h2>
-          <a href={`/blog${slug}`}>{title}</a>
+          <Link to={`/blog${slug}`}>{title}</Link>
         </h2>
         <L.TagsContainer>
           <div className="tag__container--read">
@@ -32,9 +33,9 @@ const BlogPreviewCard: React.FC<IBlogPreviewCardProps> = ({
           </div>
           <div className="tag__container--tags">
             {tags.map(tag => (
-              <a key={`tag-${title}-${tag}`} href={`/tag/${tag}`}>
+              <Link key={`tag-${title}-${tag}`} to={`/tag/${tag}`}>
                 #{tag}
-              </a>
+              </Link>
             ))}
           </div>
         </L.TagsContainer>
@@ -43,7 +44,9 @@ const BlogPreviewCard: React.FC<IBlogPreviewCardProps> = ({
         <p>{excerpt}</p>
       </L.ExcerptSection>
       <div>
-        <Image fluid={coverImage} />
+        <Link to={`/blog${slug}`}>
+          <Image fluid={coverImage} />
+        </Link>
       </div>
     </L.Container>
   );

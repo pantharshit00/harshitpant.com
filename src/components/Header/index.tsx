@@ -1,4 +1,5 @@
 import * as React from 'react';
+import { Link } from 'gatsby';
 import * as L from './styles';
 
 const Header: React.FC = () => {
@@ -12,7 +13,7 @@ const Header: React.FC = () => {
       <L.Header>
         <div>
           <L.Logo>
-            <a href="/">hP</a>
+            <Link to="/">hP</Link>
           </L.Logo>
         </div>
         <L.Nav>
