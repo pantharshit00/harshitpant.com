@@ -65,6 +65,10 @@ export const ArticleSection = styled.div`
   }
   font-size: ${rem('22px')};
   line-height: 2.2rem;
+  ${media.thone`
+   padding: 1rem;
+    margin: 0 auto 2rem;
+   `}
   a:not(.anchor) {
     color: inherit;
     text-decoration-color: ${p => p.theme.colors.blue[600]};
