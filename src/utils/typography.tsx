@@ -31,6 +31,10 @@ const typography = new Typography({
     code: {
       fontFamily: `"Victor Mono",SFMono-Regular,Consolas,"Liberation Mono",Menlo,Courier,monospace;`,
       fontWeight: 500,
+      background: '#C6F6D5',
+      color: '#2F855A',
+      padding: '0.25rem',
+      borderRadius: '4px',
     },
   }),
 });

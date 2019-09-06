@@ -24,6 +24,7 @@ export const Header = styled.header`
   display: flex;
   flex-direction: column;
   h2 {
+    margin-top: 0;
     font-size: ${rem('36px')};
     ${media.bigDesktop`
       font-size: ${rem('28px')};
