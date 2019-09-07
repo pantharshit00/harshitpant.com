@@ -1,10 +1,9 @@
 import * as React from 'react';
 import styled from 'styled-components';
 import BlogPreviewSection from '@components/BlogPreviewSection';
-import { useStaticQuery } from 'gatsby';
+import useRecentBlogs from '@utils/useRecentBlogs';
 import Layout from '../components/Layout';
 import SEO from '../components/seo';
-import { BLOG_POSTS_QUERY } from '.';
 
 const Container = styled.div`
   padding: 1rem;
@@ -278,7 +277,7 @@ const FournotFourSVG: React.FC = props => (
 );
 
 const NotFoundPage = () => {
-  const data = useStaticQuery(BLOG_POSTS_QUERY);
+  const data = useRecentBlogs();
   return (
     <Layout>
       <SEO title="404: Not found" />
@@ -287,7 +286,7 @@ const NotFoundPage = () => {
         <h1>NOT FOUND</h1>
         <p>You just hit a route that doesn&#39;t exist... the sadness.</p>
       </Container>
-      <BlogPreviewSection title="" data={data.allMdx.nodes} />
+      <BlogPreviewSection title="" data={data} />
     </Layout>
   );
 };

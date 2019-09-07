@@ -1,5 +1,4 @@
 import * as React from 'react';
-import { graphql, useStaticQuery } from 'gatsby';
 
 import Layout from '@components/Layout';
 import SEO from '@components/seo';
@@ -8,40 +7,10 @@ import AboutMeSection from '@components/AboutMeSection';
 import ProjectShowcase from '@components/ProjectShowcase';
 import BlogPreviewSection from '@components/BlogPreviewSection';
 import ContactSection from '@components/ContactSection';
-
-export const BLOG_POSTS_QUERY = graphql`
-  {
-    allMdx(
-      filter: { frontmatter: { draft: { ne: true } } }
-      sort: { fields: [frontmatter___date], order: DESC }
-      limit: 3
-    ) {
-      totalCount
-      nodes {
-        id
-        excerpt(pruneLength: 150)
-        timeToRead
-        frontmatter {
-          title
-          tags
-          cover {
-            childImageSharp {
-              fluid(maxWidth: 1920) {
-                ...GatsbyImageSharpFluid_withWebp_tracedSVG
-              }
-            }
-          }
-        }
-        fields {
-          slug
-        }
-      }
-    }
-  }
-`;
+import useRecentBlogs from '@utils/useRecentBlogs';
 
 const IndexPage = () => {
-  const data = useStaticQuery(BLOG_POSTS_QUERY);
+  const data = useRecentBlogs();
 
   return (
     <Layout>
@@ -49,7 +18,7 @@ const IndexPage = () => {
       <ProfileImageHeroSection />
       <AboutMeSection />
       <ProjectShowcase />
-      <BlogPreviewSection data={data.allMdx.nodes} />
+      <BlogPreviewSection data={data} />
       <ContactSection />
     </Layout>
   );
