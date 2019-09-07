@@ -59,9 +59,9 @@ export const Nav = styled.nav<{ open: boolean }>`
         box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.12), 0px 4px 5px rgba(0, 0, 0, 0.14),
           0px 2px 4px rgba(0, 0, 0, 0.2);
           .close__button {
-            display: flex;
-            justify-content: right;
+           display: block;
             button {
+              float: right;
               background: none;
               outline: none;
               cursor: pointer;
