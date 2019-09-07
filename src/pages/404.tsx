@@ -7,20 +7,21 @@ import SEO from '../components/seo';
 
 const Container = styled.div`
   padding: 1rem;
-  text-align: center;
-  > svg {
-    height: auto;
-    width: 600px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  .svg__container {
+    max-width: 600px;
+    > svg {
+      height: 100%;
+      width: 100%;
+    }
   }
 `;
 
 const FournotFourSVG: React.FC = props => (
-  <svg
-    width={1074.392}
-    height={584.231}
-    viewBox="0 0 1074.392 584.231"
-    {...props}
-  >
+  <svg width={600} height={584.231} viewBox="0 0 1074.392 584.231" {...props}>
     <ellipse
       cx={540.64346}
       cy={549.3094}
@@ -282,7 +283,9 @@ const NotFoundPage = () => {
     <Layout>
       <SEO title="404: Not found" />
       <Container>
-        <FournotFourSVG />
+        <div className="svg__container">
+          <FournotFourSVG />
+        </div>
         <h1>NOT FOUND</h1>
         <p>You just hit a route that doesn&#39;t exist... the sadness.</p>
       </Container>
