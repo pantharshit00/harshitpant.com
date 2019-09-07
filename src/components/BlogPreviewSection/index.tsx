@@ -2,11 +2,14 @@ import * as React from 'react';
 import BlogPreviewCard from '@components/BlogPreviewCard';
 import * as G from '@components/Shared';
 
-const BlogPreviewSection: React.FC<{ data: any }> = ({ data }) => {
+const BlogPreviewSection: React.FC<{ data: any; title?: string }> = ({
+  data,
+  title = 'Blog',
+}) => {
   return (
     <G.Container>
       <G.CenteredHeader>
-        <h1>Blog</h1>
+        <h1>{title}</h1>
       </G.CenteredHeader>
       <div
         style={{

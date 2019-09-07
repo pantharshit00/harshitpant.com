@@ -113,8 +113,10 @@ export const Bezier = styled.div`
   margin-top: 3rem;  
 `;
 
-export const Button = styled(BaseButton)`
+export const Button = styled(BaseButton)<{ href?: string }>`
   font-size: ${rem('24px')};
+  text-decoration: none;
+  padding: 0.5rem 1rem;
   ${media.bigDesktop`
   font-size: ${rem('20px')};
     `}

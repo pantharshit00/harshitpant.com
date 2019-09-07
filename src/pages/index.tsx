@@ -9,7 +9,7 @@ import ProjectShowcase from '@components/ProjectShowcase';
 import BlogPreviewSection from '@components/BlogPreviewSection';
 import ContactSection from '@components/ContactSection';
 
-const BLOG_POSTS_QUERY = graphql`
+export const BLOG_POSTS_QUERY = graphql`
   {
     allMdx(
       filter: { frontmatter: { draft: { ne: true } } }

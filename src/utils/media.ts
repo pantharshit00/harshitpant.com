@@ -20,6 +20,7 @@ export const media = Object.entries(sizes).reduce<
   // use em in breakpoints to work properly cross-browser and support users
   // changing their browsers font-size: https://zellwk.com/blog/media-query-units/
   const emSize = size / 16;
+  // eslint-disable-next-line @typescript-eslint/ban-ts-ignore
   // @ts-ignore
   accumulator[label] = (first, ...interp) => css`
     @media (max-width: ${emSize}em) {

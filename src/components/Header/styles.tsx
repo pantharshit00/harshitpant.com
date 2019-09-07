@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { rem } from 'polished';
+import { rem, rgba } from 'polished';
 import media from '@utils/media';
 import Button from '../Button';
 
@@ -33,10 +33,42 @@ export const Logo = styled.h1`
   }
 `;
 
-export const Nav = styled.nav`
+export const Nav = styled.nav<{ open: boolean }>`
   display: flex;
+  .close__button {
+    display: none;
+  }
   ${media.tablet`
-  display: none;
+      display: ${(p: any) => (p.open ? 'flex' : 'none')};
+      position: fixed;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      z-index: 20;
+      background: ${(p: any) => rgba(p.theme.colors.gray[900], 0.8)};
+      justify-content: center;
+      align-items: center;
+      > div {
+        display: flex;
+        flex-direction: column;
+        background: white;
+        width: 80%;
+        padding: 1rem;
+        border-radius: 8px;
+        box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.12), 0px 4px 5px rgba(0, 0, 0, 0.14),
+          0px 2px 4px rgba(0, 0, 0, 0.2);
+          .close__button {
+            display: flex;
+            justify-content: right;
+            button {
+              background: none;
+              outline: none;
+              cursor: pointer;
+              border: none;
+            }
+          }
+      }
     `}
 `;
 
@@ -49,12 +81,18 @@ export const NavA = styled.a`
   color: ${p => p.theme.colors.gray[700]};
   text-decoration: none;
   transition: all 0.7s cubic-bezier(0.075, 0.82, 0.165, 1);
-  &:hover,
-  &:focus,
-  &:active {
-    border-bottom: 1px solid ${p => p.theme.colors.green[800]};
-    box-shadow: inset 0 -1.75px 0px 0px ${p => p.theme.colors.green[800]};
+  @media all and (min-width: 768px) {
+    &:hover,
+    &:focus,
+    &:active {
+      border-bottom: 1px solid ${p => p.theme.colors.green[800]};
+      box-shadow: inset 0 -1.75px 0px 0px ${p => p.theme.colors.green[800]};
+    }
   }
+  ${media.tablet`
+     margin: 1rem;
+     font-size: ${rem('26px')};
+    `}
 `;
 
 export const MenuButton = styled(Button)`

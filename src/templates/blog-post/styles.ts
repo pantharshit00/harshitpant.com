@@ -47,6 +47,7 @@ export const HeroContainer = styled.div`
 
 export const ArticleSection = styled.div`
   background: #fff;
+  font-weight: 300;
   border-radius: 8px;
   background-image: linear-gradient(
     rgba(255, 255, 255, 0.75),

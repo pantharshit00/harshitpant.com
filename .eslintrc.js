@@ -51,6 +51,7 @@ module.exports = {
     "@typescript-eslint/no-non-null-assertion": "off",
     "@typescript-eslint/prefer-interface": "off",
     "@typescript-eslint/no-empty-interface": "off",
+    "react/jsx-props-no-spreading":"off",
     "@typescript-eslint/no-unused-vars": [
       "error",
       {
