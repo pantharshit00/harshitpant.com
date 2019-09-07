@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import BlogPreviewSection from '@components/BlogPreviewSection';
 import useRecentBlogs from '@utils/useRecentBlogs';
 import Layout from '../components/Layout';
-import SEO from '../components/seo';
+import SEO from '../components/Seo';
 
 const Container = styled.div`
   padding: 1rem;

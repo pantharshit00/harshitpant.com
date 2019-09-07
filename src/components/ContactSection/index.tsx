@@ -8,7 +8,7 @@ import * as L from './styles';
 
 const ContactSection: React.FC = () => {
   return (
-    <L.Container id="contact__section">
+    <L.Container id="contact">
       <G.CenteredHeader>
         <h1>
           Say Hi{' '}

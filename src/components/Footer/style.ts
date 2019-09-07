@@ -57,6 +57,13 @@ export const LinksSection = styled.div`
       li {
         font-size: ${rem('18px')};
         font-weight: 400;
+        a {
+          color: inherit;
+          text-decoration: none;
+          :hover {
+            text-decoration: underline;
+          }
+        }
       }
     }
   }

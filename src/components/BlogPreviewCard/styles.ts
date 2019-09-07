@@ -4,6 +4,11 @@ import media from '@utils/media';
 
 export const Container = styled.article`
   display: grid;
+  cursor: pointer;
+  :hover {
+    opacity: 0.6;
+  }
+  transition: all 0.2s ease-in-out;
   box-shadow: 0px 1px 0px rgba(0, 0, 0, 0.1);
   padding: 1rem;
   padding-bottom: 3rem;
@@ -36,10 +41,6 @@ export const Header = styled.header`
       font-size: ${rem('20px')};
     `}
     font-weight: 600;
-    transition: all 0.1s ease-out;
-    :hover {
-      opacity: 0.6;
-    }
     a {
       text-decoration: none;
       color: ${p => p.theme.colors.gray[900]};

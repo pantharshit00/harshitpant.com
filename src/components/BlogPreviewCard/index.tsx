@@ -1,7 +1,7 @@
 import * as React from 'react';
 // import ProfileImage from '@components/Images/ProfilePic';
 import Image from 'gatsby-image';
-import { Link } from 'gatsby';
+import { Link, navigate } from 'gatsby';
 import * as L from './styles';
 
 export interface IBlogPreviewCardProps {
@@ -22,7 +22,7 @@ const BlogPreviewCard: React.FC<IBlogPreviewCardProps> = ({
   slug,
 }) => {
   return (
-    <L.Container>
+    <L.Container onClick={() => navigate(`/blog${slug}`)}>
       <L.Header>
         <h2>
           <Link to={`/blog${slug}`}>{title}</Link>
@@ -33,7 +33,15 @@ const BlogPreviewCard: React.FC<IBlogPreviewCardProps> = ({
           </div>
           <div className="tag__container--tags">
             {tags.map(tag => (
-              <Link key={`tag-${title}-${tag}`} to={`/tag/${tag}`}>
+              <Link
+                onClick={e => {
+                  // so that navigation to blog won't trigger an we can goto the tag
+                  // this will stop event bubbling and we navigate won't be called on the root element of this component
+                  e.stopPropagation();
+                }}
+                key={`tag-${title}-${tag}`}
+                to={`/tag/${tag}`}
+              >
                 #{tag}
               </Link>
             ))}

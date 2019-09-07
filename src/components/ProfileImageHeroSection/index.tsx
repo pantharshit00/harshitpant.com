@@ -23,7 +23,7 @@ const ProfileImageHeroSection: React.FC = () => {
             </L.HeroText>
           </div>
           <div>
-            <L.Button as="a" href="#contact__section">
+            <L.Button as="a" href="#contact">
               Say Hi!{' '}
               <span role="img" aria-label="wave">
                 👋

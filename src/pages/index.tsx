@@ -1,7 +1,6 @@
 import * as React from 'react';
-
 import Layout from '@components/Layout';
-import SEO from '@components/seo';
+import SEO from '@components/Seo';
 import ProfileImageHeroSection from '@components/ProfileImageHeroSection';
 import AboutMeSection from '@components/AboutMeSection';
 import ProjectShowcase from '@components/ProjectShowcase';

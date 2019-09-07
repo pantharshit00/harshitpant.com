@@ -80,6 +80,25 @@ exports.createPages = ({ graphql, actions }) => {
             }
           });
         });
+
+        // tag pages
+
+             // create tag pages
+      const tagList = blogPosts
+        .filter(post => post.frontmatter.tags)
+        .map(post => post.frontmatter.tags)
+        .reduce((acc, postTagArr) => acc.concat(postTagArr), []);
+
+            new Set(tagList).forEach(tag => {
+        createPage({
+          path: `/tag/${tag.toLowerCase()}/`,
+          component: path.resolve('./src/templates/tag/index.tsx'),
+          context: {
+            tag,
+          },
+        });
+      });
+
         return resolve();
       })
       .catch(reject);

@@ -1,6 +1,7 @@
 import * as React from 'react';
 import TwitterIcon from '@components/Shared/TwitterIcon';
 import GithubSpectrumIcon from '@components/Shared/GithubSpectrumIcon';
+import { Link } from 'gatsby';
 import * as L from './style';
 
 const Footer = () => {
@@ -31,17 +32,29 @@ const Footer = () => {
             <div className="linksection__container">
               <h4>Navigation</h4>
               <ul>
-                <li>Home</li>
-                <li>Blog</li>
-                <li>About</li>
+                <li>
+                  <Link to="/">Home</Link>
+                </li>
+                <li>
+                  <Link to="/blogs">Blog</Link>
+                </li>
+                <li>
+                  <Link to="/#about">About</Link>
+                </li>
               </ul>
             </div>
             <div className="linksection__container">
               <h4>Contact</h4>
               <ul>
-                <li>Github</li>
-                <li>Twitter</li>
-                <li>Email</li>
+                <li>
+                  <a href="https://github.com/pantharshit00">Github</a>
+                </li>
+                <li>
+                  <a href="https://twitter.com/pantharshit00">Twitter</a>
+                </li>
+                <li>
+                  <a href="mailto:hi@harshitpant.com">Email</a>
+                </li>
               </ul>
             </div>
           </L.LinksSection>

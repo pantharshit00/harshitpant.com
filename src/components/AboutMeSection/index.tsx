@@ -6,7 +6,7 @@ import * as L from './styles';
 
 const AboutMeSection = () => {
   return (
-    <L.Container>
+    <L.Container id="about">
       <G.CenteredHeader>
         <h1>About Me</h1>
       </G.CenteredHeader>

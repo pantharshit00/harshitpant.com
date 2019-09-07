@@ -39,9 +39,11 @@ const Header: React.FC = () => {
                 <div className="sr-only">close button</div>
               </button>
             </div>
-            <L.NavA href="#contact">Contact</L.NavA>
-            <L.NavA href="/blog">Blog</L.NavA>
-            <L.NavA href="#about">About</L.NavA>
+            <L.NavA href="/#contact">Contact</L.NavA>
+            <L.NavA as={Link} to="/blogs">
+              Blog
+            </L.NavA>
+            <L.NavA href="/#about">About</L.NavA>
             <L.NavA href="/resume">Resume</L.NavA>
           </div>
         </L.Nav>

@@ -72,7 +72,7 @@ export const Nav = styled.nav<{ open: boolean }>`
     `}
 `;
 
-export const NavA = styled.a`
+export const NavA = styled.a<{ to?: string }>`
   font-family: ${p => p.theme.monoFontFamily};
   font-size: ${rem('20px')};
   font-weight: 500;
