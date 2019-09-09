@@ -37,6 +37,7 @@ const BlogPost: React.FC<any> = ({ data }) => {
             Tags:{' '}
             {post.frontmatter.tags.map((t: string) => (
               <Link
+                key={`${post.id}-${t}`}
                 style={{ marginLeft: '0.4rem', marginRight: '0.4rem' }}
                 to={`/tag/${t}`}
               >
@@ -58,6 +59,7 @@ export const pageQuery = graphql`
       }
     }
     mdx(fields: { slug: { eq: $slug } }) {
+      id
       body
       excerpt
       frontmatter {
