@@ -6,7 +6,7 @@ export const Container = styled.div`
   padding: 3rem 6rem;
   position: relative;
   ${media.tablet`
-    padding: 1rem;
+    padding: 4rem 1rem;
   `}
 `;
 

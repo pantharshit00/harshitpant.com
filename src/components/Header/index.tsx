@@ -23,6 +23,14 @@ const CloseIcon: React.FC = props => (
 
 const Header: React.FC = () => {
   const [open, setMenuOpen] = React.useState(false);
+
+  function openMenu() {
+    setMenuOpen(true);
+  }
+
+  function closeMenu() {
+    setMenuOpen(false);
+  }
   return (
     <L.Container>
       <L.Header>
@@ -34,20 +42,26 @@ const Header: React.FC = () => {
         <L.Nav open={open}>
           <div>
             <div className="close__button">
-              <button type="button" onClick={() => setMenuOpen(false)}>
+              <button type="button" onClick={closeMenu}>
                 <CloseIcon />
                 <div className="sr-only">close button</div>
               </button>
             </div>
-            <L.NavA href="/#contact">Contact</L.NavA>
-            <L.NavA as={Link} to="/blogs">
+            <L.NavA onClick={closeMenu} href="/#contact">
+              Contact
+            </L.NavA>
+            <L.NavA as={Link} to="/blogs" onClick={closeMenu}>
               Blog
             </L.NavA>
-            <L.NavA href="/#about">About</L.NavA>
-            <L.NavA href="/resume">Resume</L.NavA>
+            <L.NavA onClick={closeMenu} href="/#about">
+              About
+            </L.NavA>
+            <L.NavA href="/resume" onClick={closeMenu}>
+              Resume
+            </L.NavA>
           </div>
         </L.Nav>
-        <L.MenuButton onClick={() => setMenuOpen(true)}>Menu</L.MenuButton>
+        <L.MenuButton onClick={openMenu}>Menu</L.MenuButton>
       </L.Header>
     </L.Container>
   );

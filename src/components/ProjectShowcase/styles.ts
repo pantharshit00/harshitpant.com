@@ -4,7 +4,8 @@ import media from '@utils/media';
 
 export const Container = styled(BaseContainer)`
   background: ${p => p.theme.colors.green[800]};
-  padding-bottom: 12rem;
+  padding-top: 8rem;
+  padding-bottom: 18rem;
 `;
 
 export const Grid = styled.div`

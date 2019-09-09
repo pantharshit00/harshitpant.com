@@ -33,6 +33,17 @@ const BlogPost: React.FC<any> = ({ data }) => {
 
         <L.ArticleSection>
           <MDXRenderer>{data.mdx.body}</MDXRenderer>
+          <div>
+            Tags:{' '}
+            {post.frontmatter.tags.map((t: string) => (
+              <Link
+                style={{ marginLeft: '0.4rem', marginRight: '0.4rem' }}
+                to={`/tag/${t}`}
+              >
+                {t}
+              </Link>
+            ))}
+          </div>
         </L.ArticleSection>
       </L.Container>
     </Layout>
