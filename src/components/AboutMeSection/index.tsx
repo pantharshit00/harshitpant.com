@@ -1,28 +1,49 @@
 import * as React from 'react';
 import * as G from '@components/Shared';
+import useVisibilitySensor from '@rooks/use-visibility-sensor';
+import { useSpring, animated, config } from 'react-spring';
 import SvgBezier from '../SvgBezier';
 import CoderSvg from './coderSvg';
 import * as L from './styles';
 
 const AboutMeSection = () => {
+  const node = React.useRef(null);
+  const { isVisible } = useVisibilitySensor(node, {
+    intervalCheck: false,
+    partialVisibility: true,
+    scrollCheck: true,
+    resizeCheck: true,
+  });
+
+  const fade = useSpring({
+    transform: isVisible ? 'translateY(0)' : 'translateY(-45px)',
+    opacity: isVisible ? 1 : 0,
+    config: config.slow,
+  });
+  const slideRight = useSpring({
+    transform: isVisible ? 'translateX(0)' : 'translateX(-45px)',
+    opacity: isVisible ? 1 : 0,
+    config: config.slow,
+  });
   return (
-    <L.Container id="about">
+    <L.Container ref={node} id="about">
       <G.CenteredHeader>
-        <h1>About Me</h1>
+        <h1>{JSON.stringify(isVisible)}</h1>
       </G.CenteredHeader>
       <L.SectionContainer>
         <G.SVGSectionWrapper>
           <CoderSvg />
         </G.SVGSectionWrapper>
         <L.CoderTextSection>
-          <p id="brief_desc">
+          <animated.p id="brief_desc" style={fade}>
             I started coding with my friends when I was in 6th grade. Over time
             I learned various technologies and programming concept and started
             developing my own applications
-          </p>
-          <p id="iuse_desc">
+          </animated.p>
+
+          <animated.p style={slideRight} id="iuse_desc">
             I primarily use the following technologies, tools and libraries:
-          </p>
+          </animated.p>
           <ul>
             <li>Javascript</li>
             <li>SQL & NoSQL</li>
