@@ -1,8 +1,22 @@
 import * as React from 'react';
 import ProfilePic from '@components/Images/ProfilePic';
+import { useSpring, config } from 'react-spring';
 import * as L from './styles';
+// import Bezier from './bezier';
 
 const ProfileImageHeroSection: React.FC = () => {
+  const slideLeft = useSpring({
+    from: { transform: 'translateX(-200px)', opacity: 0 },
+    transform: 'translateX(0px)',
+    opacity: 1,
+    config: config.molasses,
+  });
+  const slideTop = useSpring({
+    from: { transform: 'translateY(-200px)', opacity: 0 },
+    transform: 'translateY(0px)',
+    opacity: 1,
+    config: config.molasses,
+  });
   return (
     <>
       <L.Section>
@@ -12,10 +26,10 @@ const ProfileImageHeroSection: React.FC = () => {
         </L.ImageSection>
         <L.TextSection>
           <div>
-            <L.YellowH6>Hi, I{"'"}m</L.YellowH6>
+            <L.YellowH6 style={slideTop}>Hi, I{"'"}m</L.YellowH6>
           </div>
           <div>
-            <L.HeroH1>Harshit Pant.</L.HeroH1>
+            <L.HeroH1 style={slideLeft}>Harshit Pant.</L.HeroH1>
           </div>
           <div>
             <L.HeroText>
@@ -32,7 +46,7 @@ const ProfileImageHeroSection: React.FC = () => {
           </div>
         </L.TextSection>
       </L.Section>
-      <L.Bezier></L.Bezier>
+      <L.Bezier />
     </>
   );
 };
