@@ -105,8 +105,10 @@ export const HeroText = styled.h3`
   `}
 `;
 
+// margin-left below is kind of a hack because the svg I am using start a bit from right
 export const Bezier = styled(bezier)`
   margin-top: 3.5rem;
+  margin-left: -20px;
 `;
 
 export const Button = styled(BaseButton)<{ href?: string }>`

@@ -1,22 +1,12 @@
 import * as React from 'react';
 import ProfilePic from '@components/Images/ProfilePic';
-import { useSpring, config } from 'react-spring';
+import { useSlideLeft, useSlideTop } from '@hooks/animations';
 import * as L from './styles';
 // import Bezier from './bezier';
 
 const ProfileImageHeroSection: React.FC = () => {
-  const slideLeft = useSpring({
-    from: { transform: 'translateX(-200px)', opacity: 0 },
-    transform: 'translateX(0px)',
-    opacity: 1,
-    config: config.molasses,
-  });
-  const slideTop = useSpring({
-    from: { transform: 'translateY(-200px)', opacity: 0 },
-    transform: 'translateY(0px)',
-    opacity: 1,
-    config: config.molasses,
-  });
+  const slideLeft = useSlideLeft();
+  const slideTop = useSlideTop();
   return (
     <>
       <L.Section>

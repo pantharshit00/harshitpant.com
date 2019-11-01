@@ -14,7 +14,8 @@
       "@fonts/*": ["src/fonts/*"],
       "@images/*": ["src/images/*"],
       "@pages/*": ["src/pages/*"],
-      "@utils/*": ["src/utils/*"]
+      "@utils/*": ["src/utils/*"],
+      "@hooks/*": ["src/hooks/*"]
     }
   }
 }
