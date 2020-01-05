@@ -1,5 +1,5 @@
 <h1 align="center">Harshit's Personal Website</h1>
-<p align="center">Source code of my personal blog powered by [Gatsby](https://gatsbyjs.org)</p>
+<p align="center">Source code of my personal blog powered by <a href="https://gatsbyjs.org">Gatsby</a></p>
 <div align="center">
 <a href="https://app.netlify.com/sites/harshitp/deploys" target="_blank">
     <img src="https://api.netlify.com/api/v1/badges/6e7015b7-2513-46da-aa19-904d3fe914f7/deploy-status" alt="Netlify Status" />
