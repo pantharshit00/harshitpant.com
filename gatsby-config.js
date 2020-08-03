@@ -1,22 +1,21 @@
 module.exports = {
   siteMetadata: {
     title: `Harshit Pant's kickass website`,
-    siteUrl: "https://harshitpant.com",
+    siteUrl: 'https://harshitpant.com',
     description: `Hi! I am Harshit Pant. I am a software engineer from the Himalayas`,
-    author: "Harshit Pant",
+    author: 'Harshit Pant',
     social: {
-      twitter: "@pantharshit00"
-    }
+      twitter: '@pantharshit00',
+    },
   },
   plugins: [
     `gatsby-plugin-typescript`,
     {
       resolve: `gatsby-plugin-typography`,
       options: {
-        pathToConfigModule: `src/utils/typography`
-      }
+        pathToConfigModule: `src/utils/typography`,
+      },
     },
-    `gatsby-plugin-eslint`,
     `gatsby-plugin-styled-components`,
     `gatsby-plugin-polished`,
     `gatsby-plugin-react-helmet`,
@@ -24,15 +23,15 @@ module.exports = {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `images`,
-        path: `${__dirname}/src/images`
-      }
+        path: `${__dirname}/src/images`,
+      },
     },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `blog`,
-        path: `${__dirname}/content/blog`
-      }
+        path: `${__dirname}/content/blog`,
+      },
     },
     `gatsby-plugin-sharp`,
     `gatsby-transformer-sharp`,
@@ -45,53 +44,53 @@ module.exports = {
         background_color: `#276749`,
         theme_color: `#276749`,
         display: `minimal-ui`,
-        icon: `src/images/gatsby-icon.png` // This path is relative to the root of the site.
-      }
+        icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
+      },
     },
     {
       resolve: `gatsby-plugin-mdx`,
       options: {
-        extensions: [".mdx", ".md", ".markdown"],
+        extensions: ['.mdx', '.md', '.markdown'],
         gatsbyRemarkPlugins: [
           {
-            resolve: "gatsby-remark-images",
+            resolve: 'gatsby-remark-images',
             options: {
-              backgroundColor: "#fafafa",
+              backgroundColor: '#fafafa',
               maxWidth: 1035,
-              linkImagesToOriginal: false
-            }
+              linkImagesToOriginal: false,
+            },
           },
           {
             resolve: `gatsby-remark-prismjs`,
             options: {
-              classPrefix: "language-",
+              classPrefix: 'language-',
               inlineCodeMarker: true,
               aliases: {},
               showLineNumbers: true,
-              noInlineHighlight:  true
-            }
+              noInlineHighlight: true,
+            },
           },
-          { resolve: "gatsby-remark-copy-linked-files" },
-          { resolve: "gatsby-remark-embedder" },
+          { resolve: 'gatsby-remark-copy-linked-files' },
+          { resolve: 'gatsby-remark-embedder' },
 
           { resolve: `gatsby-remark-smartypants` },
-          { resolve: 'gatsby-remark-autolink-headers'},
+          { resolve: 'gatsby-remark-autolink-headers' },
         ],
-      }
+      },
     },
     'gatsby-remark-autolink-headers',
     {
-      resolve: "gatsby-remark-images",
+      resolve: 'gatsby-remark-images',
       options: {
-        backgroundColor: "#fafafa",
+        backgroundColor: '#fafafa',
         maxWidth: 1035,
-        linkImagesToOriginal: false
-      }
+        linkImagesToOriginal: false,
+      },
     },
-    "gatsby-plugin-twitter",
-    "gatsby-plugin-netlify-cache"
+    'gatsby-plugin-twitter',
+    'gatsby-plugin-netlify-cache',
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,
-  ]
+  ],
 };

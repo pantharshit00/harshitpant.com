@@ -1,6 +1,6 @@
 import * as React from 'react';
 
-const ContactSvg: React.FC<React.SVGProps<SVGSVGElement>> = props => (
+const ContactSvg: React.FC<JSX.IntrinsicElements['svg']> = props => (
   <svg
     data-name="Layer 1"
     width={1096}

@@ -4,7 +4,7 @@ import SvgBezier from '../SvgBezier';
 import CoderSvg from './coderSvg';
 import * as L from './styles';
 
-const AboutMeSection = () => {
+const AboutMeSection: React.FC = () => {
   return (
     <L.Container id="about">
       <G.CenteredHeader>

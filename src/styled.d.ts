@@ -13,9 +13,7 @@ export interface IColorChart {
   900: string;
 }
 
-// and extend them!
 declare module 'styled-components' {
-  // eslint-disable-next-line @typescript-eslint/interface-name-prefix
   export interface DefaultTheme {
     fontFamily: string;
     monoFontFamily: string;

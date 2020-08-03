@@ -1,6 +1,6 @@
 import * as React from 'react';
 
-const TwitterIcon: React.FC<React.SVGProps<SVGSVGElement>> = props => (
+const TwitterIcon: React.FC<JSX.IntrinsicElements['svg']> = props => (
   <svg
     fillRule="evenodd"
     clipRule="evenodd"

@@ -68,7 +68,7 @@ const EmailFormContainer = styled.div`
   }
 `;
 
-const EmailForm = () => {
+const EmailForm: React.FC = () => {
   const [copied, setCopied] = React.useState(false);
   let x: number | null = null;
   React.useEffect(

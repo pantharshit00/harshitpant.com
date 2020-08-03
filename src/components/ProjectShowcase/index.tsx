@@ -104,7 +104,7 @@ const FUSLogo = () => (
   </svg>
 );
 
-const ProjectShowcase = () => {
+const ProjectShowcase: React.FC = () => {
   return (
     <L.Container>
       <G.CenteredHeader color={theme.colors.gray[100]}>

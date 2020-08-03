@@ -4,7 +4,7 @@ import GithubSpectrumIcon from '@components/Shared/GithubSpectrumIcon';
 import { Link } from 'gatsby';
 import * as L from './style';
 
-const Footer = () => {
+const Footer: React.FC = () => {
   return (
     <>
       <L.Container as="footer">

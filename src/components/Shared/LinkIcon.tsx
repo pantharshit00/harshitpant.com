@@ -1,6 +1,6 @@
 import * as React from 'react';
 
-const LinkIcon: React.FC<React.SVGProps<SVGSVGElement>> = props => (
+const LinkIcon: React.FC<JSX.IntrinsicElements['svg']> = props => (
   <svg
     width={24}
     height={24}

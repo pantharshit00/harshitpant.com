@@ -25,7 +25,7 @@ const Tooltip: React.FC<TooltipProps & { children: any }> = ({
   const { isVisible, triggerRect } = tooltip;
 
   return (
-    <React.Fragment>
+    <>
       {React.cloneElement(children, trigger)}
 
       {isVisible && (
@@ -33,9 +33,12 @@ const Tooltip: React.FC<TooltipProps & { children: any }> = ({
           <div
             style={{
               position: 'absolute',
-              left:
-                triggerRect && triggerRect.left - 10 + triggerRect.width / 2,
-              top: triggerRect && triggerRect.bottom + window.scrollY,
+              left: triggerRect
+                ? triggerRect.left - 10 + triggerRect.width / 2
+                : undefined,
+              top: triggerRect
+                ? triggerRect.bottom + window.scrollY
+                : undefined,
               width: 0,
               height: 0,
               borderLeft: '10px solid transparent',
@@ -58,7 +61,7 @@ const Tooltip: React.FC<TooltipProps & { children: any }> = ({
         }}
         position={centered as any}
       />
-    </React.Fragment>
+    </>
   );
 };
 

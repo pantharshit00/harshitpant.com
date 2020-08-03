@@ -5,8 +5,8 @@ import * as L from './styles';
 // import Bezier from './bezier';
 
 const ProfileImageHeroSection: React.FC = () => {
-  const slideLeft = useSlideLeft();
-  const slideTop = useSlideTop();
+  const slideLeft = useSlideLeft() as any;
+  const slideTop = useSlideTop() as any;
   return (
     <>
       <L.Section>
@@ -16,7 +16,7 @@ const ProfileImageHeroSection: React.FC = () => {
         </L.ImageSection>
         <L.TextSection>
           <div>
-            <L.YellowH6 style={slideTop}>Hi, I{"'"}m</L.YellowH6>
+            <L.YellowH6 style={slideTop}>Hi, I&apos;m</L.YellowH6>
           </div>
           <div>
             <L.HeroH1 style={slideLeft}>Harshit Pant.</L.HeroH1>

@@ -1,6 +1,6 @@
 import * as React from 'react';
 
-const GithubSpectrumIcon: React.FC<React.SVGProps<SVGSVGElement>> = props => (
+const GithubSpectrumIcon: React.FC<JSX.IntrinsicElements['svg']> = props => (
   <svg
     fillRule="evenodd"
     clipRule="evenodd"

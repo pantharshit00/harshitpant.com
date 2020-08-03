@@ -9,6 +9,7 @@
     "strict": true,
     "noEmit": true,
     "baseUrl": ".",
+    "skipLibCheck": true,
     "paths": {
       "@components/*": ["src/components/*"],
       "@fonts/*": ["src/fonts/*"],

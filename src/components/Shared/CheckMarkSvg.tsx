@@ -1,6 +1,6 @@
 import * as React from 'react';
 
-const CheckMarkSvg: React.FC<React.SVGProps<SVGSVGElement>> = props => (
+const CheckMarkSvg: React.FC<JSX.IntrinsicElements['svg']> = props => (
   <svg
     width="24"
     height="24"

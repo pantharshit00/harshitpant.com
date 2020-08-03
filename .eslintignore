@@ -1,2 +1,5 @@
-/node_modules/*
-/gatsby-*.js
+node_modules
+gatsby-*.js
+public
+.cache
+content
