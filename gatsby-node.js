@@ -5,17 +5,17 @@
  */
 
 // You can delete this file if you're not using it
-const path = require("path");
-const { createFilePath } = require("gatsby-source-filesystem");
+const path = require('path');
+const { createFilePath } = require('gatsby-source-filesystem');
 
 exports.onCreateNode = ({ node, getNode, actions }) => {
   const { createNodeField } = actions;
-  if (node.internal.type === "Mdx") {
+  if (node.internal.type === 'Mdx') {
     const slug = createFilePath({ node, getNode, trailingSlash: false });
     createNodeField({
       node,
-      name: "slug",
-      value: slug
+      name: 'slug',
+      value: slug,
     });
   }
 };
@@ -24,20 +24,25 @@ exports.onCreateWebpackConfig = ({ stage, loaders, actions }) => {
   actions.setWebpackConfig({
     resolve: {
       alias: {
-        "@components": path.resolve(__dirname, "src/components"),
-        "@fonts": path.resolve(__dirname, "src/fonts"),
-        "@images": path.resolve(__dirname, "src/images"),
-        "@pages": path.resolve(__dirname, "src/pages"),
-        "@utils": path.resolve(__dirname, "src/utils"),
-        "@hooks": path.resolve(__dirname, "src/hooks")
-      }
-    }
+        '@components': path.resolve(__dirname, 'src/components'),
+        '@fonts': path.resolve(__dirname, 'src/fonts'),
+        '@images': path.resolve(__dirname, 'src/images'),
+        '@pages': path.resolve(__dirname, 'src/pages'),
+        '@utils': path.resolve(__dirname, 'src/utils'),
+        '@hooks': path.resolve(__dirname, 'src/hooks'),
+      },
+    },
   });
 };
 
 exports.createPages = ({ graphql, actions }) => {
-  const { createPage } = actions;
-
+  const { createPage, createRedirect } = actions;
+  createRedirect({
+    fromPath: '/met.js',
+    toPath: 'https://www.google-analytics.com/analytics.js',
+    statusCode: 200,
+    force: true,
+  });
   // grab all markdown posts
   return new Promise((resolve, reject) => {
     graphql(`
@@ -61,7 +66,7 @@ exports.createPages = ({ graphql, actions }) => {
         }
       }
     `)
-      .then(result => {
+      .then((result) => {
         if (result.errors) {
           return reject(result.errors);
         }
@@ -73,32 +78,32 @@ exports.createPages = ({ graphql, actions }) => {
 
           createPage({
             path: `/blog${node.fields.slug}`,
-            component: path.resolve("./src/templates/blog-post/index.tsx"),
+            component: path.resolve('./src/templates/blog-post/index.tsx'),
             context: {
               slug: node.fields.slug,
               prev,
-              next
-            }
+              next,
+            },
           });
         });
 
         // tag pages
 
-             // create tag pages
-      const tagList = blogPosts
-        .filter(post => post.frontmatter.tags)
-        .map(post => post.frontmatter.tags)
-        .reduce((acc, postTagArr) => acc.concat(postTagArr), []);
+        // create tag pages
+        const tagList = blogPosts
+          .filter((post) => post.frontmatter.tags)
+          .map((post) => post.frontmatter.tags)
+          .reduce((acc, postTagArr) => acc.concat(postTagArr), []);
 
-            new Set(tagList).forEach(tag => {
-        createPage({
-          path: `/tag/${tag.toLowerCase()}/`,
-          component: path.resolve('./src/templates/tag/index.tsx'),
-          context: {
-            tag,
-          },
+        new Set(tagList).forEach((tag) => {
+          createPage({
+            path: `/tag/${tag.toLowerCase()}/`,
+            component: path.resolve('./src/templates/tag/index.tsx'),
+            context: {
+              tag,
+            },
+          });
         });
-      });
 
         return resolve();
       })

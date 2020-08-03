@@ -5,3 +5,12 @@
  */
 
 // You can delete this file if you're not using it
+const { init, trackPage } = require('./stats');
+
+exports.onClientEntry = () => {
+  init();
+};
+
+exports.onRouteUpdate = ({ location }) => {
+  trackPage(location.pathname);
+};

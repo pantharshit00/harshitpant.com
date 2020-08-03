@@ -79,6 +79,7 @@ module.exports = {
       },
     },
     'gatsby-remark-autolink-headers',
+    'gatsby-plugin-netlify',
     {
       resolve: 'gatsby-remark-images',
       options: {
