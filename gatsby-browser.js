@@ -12,5 +12,5 @@ exports.onClientEntry = () => {
 };
 
 exports.onRouteUpdate = ({ location }) => {
-  trackPage(location.pathname);
+  trackPage(location.pathname + location.search);
 };
