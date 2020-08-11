@@ -140,12 +140,12 @@ const ProjectShowcase: React.FC = () => {
               color: '#63B3ED',
               textColor: '#1B3082',
             },
-            { text: 'Go', color: '#B2F5EA', textColor: '#2B66B0' },
+            { text: 'Rust', color: '#B7791F', textColor: '#1A202C' },
           ]}
           texts={[
-            'My current project. I am mainly responsible for Developer Success ',
-            'Managing an active community across various channels(15k+ stars on Github, 17k+ users in Slack)',
-            'Worked on triaging various bugs reported by our users.',
+            'My current project. I mainly do issue triaging and internal tooling',
+            'Handling large projects on Github(over 4.6K stars on V2 and over 17K stars on V1)',
+            'Worked on internal tooling like error reporting',
           ]}
           websiteLink="https://prisma.io"
           githubLink="https://github.com/prisma/prisma"

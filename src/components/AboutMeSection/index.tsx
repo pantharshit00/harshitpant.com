@@ -24,7 +24,7 @@ const AboutMeSection: React.FC = () => {
             I primarily use the following technologies, tools and libraries:
           </p>
           <ul>
-            <li>Javascript</li>
+            <li>Rust</li>
             <li>SQL & NoSQL</li>
             <li>TypeScript</li>
             <li>Serverless</li>

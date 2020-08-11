@@ -56,9 +56,6 @@ const Header: React.FC = () => {
             <L.NavA onClick={closeMenu} href="/#about">
               About
             </L.NavA>
-            <L.NavA href="/resume" onClick={closeMenu}>
-              Resume
-            </L.NavA>
           </div>
         </L.Nav>
         <L.MenuButton onClick={openMenu}>Menu</L.MenuButton>
