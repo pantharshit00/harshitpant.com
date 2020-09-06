@@ -15,7 +15,7 @@ https://twitter.com/peggyrayzis/status/944226678292860928
 
 I was pretty happy and excited as now I can kick redux out of my code base with by both hands and ten fingers. I don't hate redux in any ways it solves many problems but it was getting pretty hard to maintain our graphql and redux codebase simultaneously. Thanks you Peggy and all of the apollo team for listening to the community and making this awesome apollo-link-state package.
 
-Now in this blog post I am going to show you guys how to implement apollo-link-state in your own projects using apollo graphql. We are going to make use of the graphql server that I made in the previous [blog post](https://hptechblogs.com/making-a-graphql-api-in-express/). This post would be kind of making UI to that API. You can also implement this any gql API. Just write queries according to your need.
+Now in this blog post I am going to show you people how to implement apollo-link-state in your own projects using apollo graphql. We are going to make use of the graphql server that I made in the previous [blog post](https://hptechblogs.com/making-a-graphql-api-in-express/). This post would be kind of making UI to that API. You can also implement this any gql API. Just write queries according to your need.
 
 ---
 
