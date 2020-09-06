@@ -9,7 +9,7 @@ tags:
 cover: ./cover.png
 ---
 
-In a previous blog I showed you guys how to make a JSON Web Token Authentication Server. You can find that article [here](http://hptechblogs.com). Now in this blog post I am going to show you how you can make use of that JWT auth server in an react application. We will using the concept of higher order component to protect some of our routes. So lets get started.
+In a previous blog I showed you people how to make a JSON Web Token Authentication Server. You can find that article [here](http://hptechblogs.com). Now in this blog post I am going to show you how you can make use of that JWT auth server in an react application. We will using the concept of higher order component to protect some of our routes. So lets get started.
 
 ---
 
