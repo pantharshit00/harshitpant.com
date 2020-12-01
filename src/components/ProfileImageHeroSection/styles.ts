@@ -35,12 +35,13 @@ export const Section = styled.div`
 
 export const DSvg = styled(DotSvg)`
   position: absolute;
-  bottom: -8%;
-  left: -22%;
+  bottom: -4%;
+  left: -17%;
   z-index: -1;
   ${media.tablet`
-    top: 235px;
-    left: calc(50% - 131px - 45px);
+    top: 175px;
+    left: calc(50% - 170px);
+    bottom: -10%
   `}
 `;
 

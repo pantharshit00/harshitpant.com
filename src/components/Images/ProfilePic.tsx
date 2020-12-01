@@ -6,7 +6,7 @@ const Image: React.FC = props => {
     query ImageQuery {
       placeholderImage: file(relativePath: { eq: "my_picture.png" }) {
         childImageSharp {
-          fluid(maxWidth: 230, maxHeight: 300) {
+          fluid(maxWidth: 400, maxHeight: 400) {
             ...GatsbyImageSharpFluid_withWebp
           }
         }
