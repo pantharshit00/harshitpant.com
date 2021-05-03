@@ -79,7 +79,6 @@ module.exports = {
       },
     },
     'gatsby-remark-autolink-headers',
-    'gatsby-plugin-netlify',
     {
       resolve: 'gatsby-remark-images',
       options: {
@@ -89,7 +88,6 @@ module.exports = {
       },
     },
     'gatsby-plugin-twitter',
-    'gatsby-plugin-netlify-cache',
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,

@@ -36,13 +36,7 @@ exports.onCreateWebpackConfig = ({ stage, loaders, actions }) => {
 };
 
 exports.createPages = ({ graphql, actions }) => {
-  const { createPage, createRedirect } = actions;
-  createRedirect({
-    fromPath: '/met.js',
-    toPath: 'https://www.google-analytics.com/analytics.js',
-    statusCode: 200,
-    force: true,
-  });
+  const { createPage } = actions;
   // grab all markdown posts
   return new Promise((resolve, reject) => {
     graphql(`
@@ -66,7 +60,7 @@ exports.createPages = ({ graphql, actions }) => {
         }
       }
     `)
-      .then((result) => {
+      .then(result => {
         if (result.errors) {
           return reject(result.errors);
         }
@@ -91,11 +85,11 @@ exports.createPages = ({ graphql, actions }) => {
 
         // create tag pages
         const tagList = blogPosts
-          .filter((post) => post.frontmatter.tags)
-          .map((post) => post.frontmatter.tags)
+          .filter(post => post.frontmatter.tags)
+          .map(post => post.frontmatter.tags)
           .reduce((acc, postTagArr) => acc.concat(postTagArr), []);
 
-        new Set(tagList).forEach((tag) => {
+        new Set(tagList).forEach(tag => {
           createPage({
             path: `/tag/${tag.toLowerCase()}/`,
             component: path.resolve('./src/templates/tag/index.tsx'),
