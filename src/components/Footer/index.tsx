@@ -88,9 +88,9 @@ const Footer: React.FC = () => {
               <a
                 rel="noopener noreferrer"
                 target="_blank"
-                href="https://netlify.com"
+                href="https://pages.cloudflare.com"
               >
-                Netlify
+                Cloudflare
               </a>
             </div>
           </div>
