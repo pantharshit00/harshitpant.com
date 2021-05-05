@@ -1,5 +1,6 @@
 import * as React from 'react';
 import { useStaticQuery, graphql } from 'gatsby';
+import Img from 'gatsby-image';
 
 const Image: React.FC = props => {
   const data = useStaticQuery(graphql`
@@ -14,22 +15,7 @@ const Image: React.FC = props => {
     }
   `);
 
-  return (
-    <picture {...props}>
-      <source
-        srcSet={data.placeholderImage.childImageSharp.fluid.srcSetWebp}
-        type="image/webp"
-      />
-      <source
-        srcSet={data.placeholderImage.childImageSharp.fluid.srcSet}
-        type="image/png"
-      />
-      <img
-        alt="my_profile"
-        src={data.placeholderImage.childImageSharp.fluid.src}
-      />
-    </picture>
-  );
+  return <Img fluid={data.placeholderImage.childImageSharp.fluid} />;
 };
 
 export default Image;

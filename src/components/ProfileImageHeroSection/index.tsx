@@ -11,8 +11,10 @@ const ProfileImageHeroSection: React.FC = () => {
     <>
       <L.Section>
         <L.ImageSection>
-          <ProfilePic />
-          <L.DSvg />
+          <L.ImageContainer>
+            <ProfilePic />
+            <L.DSvg />
+          </L.ImageContainer>
         </L.ImageSection>
         <L.TextSection>
           <div>

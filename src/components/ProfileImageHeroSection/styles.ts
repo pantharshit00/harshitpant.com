@@ -38,6 +38,11 @@ export const DSvg = styled(DotSvg)`
   bottom: -4%;
   left: -17%;
   z-index: -1;
+  ${media.desktop`
+    bottom: -4%;
+    left: -17%;
+    z-index: -1;
+  `}
   ${media.tablet`
     top: 175px;
     left: calc(50% - 170px);
@@ -88,7 +93,7 @@ export const HeroH1 = styled(animated.h1)`
   font-size: ${rem('56px')};
     `}
   ${media.desktop`
-   font-size: ${rem('48px')};
+   font-size: ${rem('38px')};
   `}
 `;
 
@@ -102,7 +107,7 @@ export const HeroText = styled.h3`
   font-size: ${rem('22px')};
     `}
   ${media.desktop`
-   font-size: ${rem('20px')};
+   font-size: ${rem('18px')};
   `}
 `;
 
@@ -121,5 +126,16 @@ export const Button = styled(BaseButton)<{ href?: string }>`
     `}
   ${media.desktop`
    font-size: ${rem('18px')};
+  `}
+`;
+
+export const ImageContainer = styled.div`
+  height: 100%;
+  width: 100%;
+  max-width: 400px;
+  max-height: 400px;
+  ${media.tablet`
+    max-height: 250px;
+    max-width: 250px;
   `}
 `;
