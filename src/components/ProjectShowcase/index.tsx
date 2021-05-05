@@ -104,76 +104,74 @@ const FUSLogo = () => (
   </svg>
 );
 
-const ProjectShowcase: React.FC = () => {
-  return (
-    <L.Container>
-      <G.CenteredHeader color={theme.colors.gray[100]}>
-        <h1>Projects I have worked on</h1>
-      </G.CenteredHeader>
-      <L.Grid>
-        <ProfileCard
-          logo={<ShoppableSvg />}
-          name="Shoppable"
-          tags={[
-            {
-              text: 'React',
-              color: '#63B3ED',
-              textColor: '#1B3082',
-            },
-            // { text: 'Node', color: '#68D391', textColor: '#276749' },
-            { text: 'GraphQL  ', color: '#F687B3', textColor: '#5E266D' },
-          ]}
-          texts={[
-            'Built a fullstack server side rendered GraphQL ecommerce store',
-            'Integrated Braintree Payments APIs',
-            'Implemented complex filterable search using Algolia',
-            'Frontend is written in Next.js and backend is written in Node using Prisma for data access',
-          ]}
-          websiteLink="https://shoppable.app"
-        />
-        <ProfileCard
-          logo={<PrismaSvg />}
-          name="Prisma"
-          tags={[
-            {
-              text: 'Typescript',
-              color: '#63B3ED',
-              textColor: '#1B3082',
-            },
-            { text: 'Rust', color: '#B7791F', textColor: '#1A202C' },
-          ]}
-          texts={[
-            'My current project. I mainly do issue triaging and internal tooling',
-            'Handling large projects on Github(over 4.6K stars on V2 and over 17K stars on V1)',
-            'Worked on internal tooling like error reporting',
-          ]}
-          websiteLink="https://prisma.io"
-          githubLink="https://github.com/prisma/prisma"
-        />
-        <ProfileCard
-          logo={<FUSLogo />}
-          name="Franciscan"
-          tags={[
-            {
-              text: 'React',
-              color: '#63B3ED',
-              textColor: '#1B3082',
-            },
-            { text: 'GraphQL  ', color: '#F687B3', textColor: '#5E266D' },
-          ]}
-          texts={[
-            'Contributed to two big React JS projects.',
-            'Integrated headless wordpress using WPGraphQL',
-            'Used GraphQL on the frontend using react-apollo',
-            'Implemented passwordless authentication system',
-          ]}
-          websiteLink="https://rc.franciscan.university"
-          githubLink="https://github.com/fus-marcom/bulletin-react"
-        />
-      </L.Grid>
-      <SvgBezier color="white" svgType={2} />
-    </L.Container>
-  );
-};
+const ProjectShowcase: React.FC = () => (
+  <L.Container>
+    <G.CenteredHeader color={theme.colors.gray[100]}>
+      <h1>Projects I have worked on</h1>
+    </G.CenteredHeader>
+    <L.Grid>
+      <ProfileCard
+        logo={<ShoppableSvg />}
+        name="Shoppable"
+        tags={[
+          {
+            text: 'React',
+            color: '#63B3ED',
+            textColor: '#1B3082',
+          },
+          // { text: 'Node', color: '#68D391', textColor: '#276749' },
+          { text: 'GraphQL  ', color: '#F687B3', textColor: '#5E266D' },
+        ]}
+        texts={[
+          'Built a fullstack server side rendered GraphQL ecommerce store',
+          'Integrated Braintree Payments APIs',
+          'Implemented complex filterable search using Algolia',
+          'Frontend is written in Next.js and backend is written in Node using Prisma for data access',
+        ]}
+        websiteLink="https://shoppable.app"
+      />
+      <ProfileCard
+        logo={<PrismaSvg />}
+        name="Prisma"
+        tags={[
+          {
+            text: 'Typescript',
+            color: '#63B3ED',
+            textColor: '#1B3082',
+          },
+          { text: 'Rust', color: '#B7791F', textColor: '#1A202C' },
+        ]}
+        texts={[
+          'My current project. I mainly do issue triaging and internal tooling',
+          'Handling large projects on Github(over 4.6K stars on V2 and over 17K stars on V1)',
+          'Worked on internal tooling like error reporting',
+        ]}
+        websiteLink="https://prisma.io"
+        githubLink="https://github.com/prisma/prisma"
+      />
+      <ProfileCard
+        logo={<FUSLogo />}
+        name="Franciscan"
+        tags={[
+          {
+            text: 'React',
+            color: '#63B3ED',
+            textColor: '#1B3082',
+          },
+          { text: 'GraphQL  ', color: '#F687B3', textColor: '#5E266D' },
+        ]}
+        texts={[
+          'Contributed to two big React JS projects.',
+          'Integrated headless wordpress using WPGraphQL',
+          'Used GraphQL on the frontend using react-apollo',
+          'Implemented passwordless authentication system',
+        ]}
+        websiteLink="https://rc.franciscan.university"
+        githubLink="https://github.com/fus-marcom/bulletin-react"
+      />
+    </L.Grid>
+    <SvgBezier color="white" svgType={2} />
+  </L.Container>
+);
 
 export default ProjectShowcase;

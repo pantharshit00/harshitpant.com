@@ -35,50 +35,48 @@ const ProfileCard: React.FC<IProjectCardProps> = ({
   texts,
   name,
   ...others
-}) => {
-  return (
-    <L.Card {...others}>
-      <L.CardHeader>
-        <L.Logo>{logo}</L.Logo>
-        <L.Spacer />
-        <L.Links>
-          {githubLink ? (
-            <a href={githubLink} rel="noopener noreferrer" target="_blank">
-              <GithubIcon />
-            </a>
-          ) : (
-            ''
-          )}
-          {websiteLink ? (
-            <a href={websiteLink} rel="noopener noreferrer" target="_blank">
-              <LinkIcon />
-            </a>
-          ) : (
-            ''
-          )}
-        </L.Links>
-      </L.CardHeader>
-      <div>
-        {tags.map(tag => (
-          <Tag
-            key={`${name}-${tag.text}`}
-            color={tag.color}
-            textColor={tag.textColor}
-          >
-            {tag.text}
-          </Tag>
+}) => (
+  <L.Card {...others}>
+    <L.CardHeader>
+      <L.Logo>{logo}</L.Logo>
+      <L.Spacer />
+      <L.Links>
+        {githubLink ? (
+          <a href={githubLink} rel="noopener noreferrer" target="_blank">
+            <GithubIcon />
+          </a>
+        ) : (
+          ''
+        )}
+        {websiteLink ? (
+          <a href={websiteLink} rel="noopener noreferrer" target="_blank">
+            <LinkIcon />
+          </a>
+        ) : (
+          ''
+        )}
+      </L.Links>
+    </L.CardHeader>
+    <div>
+      {tags.map(tag => (
+        <Tag
+          key={`${name}-${tag.text}`}
+          color={tag.color}
+          textColor={tag.textColor}
+        >
+          {tag.text}
+        </Tag>
+      ))}
+    </div>
+    <L.ListContainer>
+      <L.List>
+        {texts.map((text, index) => (
+          // eslint-disable-next-line react/no-array-index-key
+          <LiWithSvg key={`${name}-text-${index}`}>{text}</LiWithSvg>
         ))}
-      </div>
-      <L.ListContainer>
-        <L.List>
-          {texts.map((text, index) => (
-            // eslint-disable-next-line react/no-array-index-key
-            <LiWithSvg key={`${name}-text-${index}`}>{text}</LiWithSvg>
-          ))}
-        </L.List>
-      </L.ListContainer>
-    </L.Card>
-  );
-};
+      </L.List>
+    </L.ListContainer>
+  </L.Card>
+);
 
 export default ProfileCard;

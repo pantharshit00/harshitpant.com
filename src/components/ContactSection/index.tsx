@@ -6,53 +6,51 @@ import EmailForm from './EmailForm';
 import ContactSvg from './contactSvg';
 import * as L from './styles';
 
-const ContactSection: React.FC = () => {
-  return (
-    <L.Container id="contact">
-      <G.CenteredHeader>
-        <h1>
-          Say Hi{' '}
-          <span role="img" aria-label="hand wave">
-            👋
+const ContactSection: React.FC = () => (
+  <L.Container id="contact">
+    <G.CenteredHeader>
+      <h1>
+        Say Hi{' '}
+        <span role="img" aria-label="hand wave">
+          👋
+        </span>
+      </h1>
+    </G.CenteredHeader>
+    <L.Grid>
+      <L.ContactFormSection>
+        <h3 className="contact__form--heading">
+          Toss me an email{' '}
+          <span role="img" aria-label="envelope">
+            ✉️
           </span>
-        </h1>
-      </G.CenteredHeader>
-      <L.Grid>
-        <L.ContactFormSection>
-          <h3 className="contact__form--heading">
-            Toss me an email{' '}
-            <span role="img" aria-label="envelope">
-              ✉️
-            </span>
-          </h3>
-          <EmailForm />
-          <L.TwitterDMSection>
-            <span>
-              Or, you can DM me on{' '}
-              <a
-                href="https://twitter.com/pantharshit00"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Twitter
-              </a>
-            </span>
+        </h3>
+        <EmailForm />
+        <L.TwitterDMSection>
+          <span>
+            Or, you can DM me on{' '}
             <a
               href="https://twitter.com/pantharshit00"
               target="_blank"
               rel="noopener noreferrer"
             >
-              <TwitterIcon />
+              Twitter
             </a>
-          </L.TwitterDMSection>
-        </L.ContactFormSection>
-        <G.SVGSectionWrapper>
-          <ContactSvg />
-        </G.SVGSectionWrapper>
-      </L.Grid>
-      <SvgBezier svgType={3} />
-    </L.Container>
-  );
-};
+          </span>
+          <a
+            href="https://twitter.com/pantharshit00"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <TwitterIcon />
+          </a>
+        </L.TwitterDMSection>
+      </L.ContactFormSection>
+      <G.SVGSectionWrapper>
+        <ContactSvg />
+      </G.SVGSectionWrapper>
+    </L.Grid>
+    <SvgBezier svgType={3} />
+  </L.Container>
+);
 
 export default ContactSection;

@@ -15,7 +15,7 @@ for (let row = 0; row < side; row += 1) {
   }
 }
 
-const DotSvg: React.FC = (p) => {
+const DotSvg: React.FC = p => {
   const transition = useTransition(circles, {
     from: { opacity: 0, r: '0px' },
     enter: { opacity: 1, r: '2px' },
@@ -24,16 +24,14 @@ const DotSvg: React.FC = (p) => {
     expires: false,
     keys: (i: Circle) => i.key,
   });
-  const points = transition((style, item) => {
-    return (
-      <animated.circle
-        style={style as any}
-        fill="#68D391"
-        cx={item.cx}
-        cy={item.cy}
-      />
-    );
-  });
+  const points = transition((style, item) => (
+    <animated.circle
+      style={style as any}
+      fill="#68D391"
+      cx={item.cx}
+      cy={item.cy}
+    />
+  ));
   return (
     <svg width={144} height={137} viewBox="0 0 116 137" fill="none" {...p}>
       {points}
