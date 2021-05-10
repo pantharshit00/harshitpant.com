@@ -30,7 +30,7 @@ export const Section = styled.div`
     display: flex;
     flex-direction: column;
       padding: 1.25rem;
-   `}
+   `} 
 `;
 
 export const DSvg = styled(DotSvg)`

@@ -6,14 +6,16 @@ import BlogPreviewSection from '@components/BlogPreviewSection';
 const Tags: React.FC<{ data: any; pageContext: any }> = ({
   data,
   ...props
-}) => (
-  <Layout>
-    <BlogPreviewSection
-      data={data.allMdx.nodes}
-      title={`Posts in #${props.pageContext.tag} (total ${data.allMdx.totalCount})`}
-    />
-  </Layout>
-);
+}) => {
+  return (
+    <Layout>
+      <BlogPreviewSection
+        data={data.allMdx.nodes}
+        title={`Posts in #${props.pageContext.tag} (total ${data.allMdx.totalCount})`}
+      />
+    </Layout>
+  );
+};
 
 export default Tags;
 

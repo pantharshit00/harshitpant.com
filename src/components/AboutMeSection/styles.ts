@@ -45,7 +45,7 @@ export const CoderTextSection = styled.div`
         content: '';
         height: ${rem('18px')};
         width: ${rem('18px')};
-        background-image: url('${chevronSvg}');
+        background-image: url("${chevronSvg}");
         background-size: contain;
         background-repeat: no-repeat;
         padding-left: 2em;

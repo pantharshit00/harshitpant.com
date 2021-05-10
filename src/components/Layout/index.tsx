@@ -9,14 +9,16 @@ import theme from '@utils/theme';
 import Footer from '../Footer';
 import Header from '../Header';
 
-const Layout: React.FC = ({ children }) => (
-  <ThemeProvider theme={theme}>
-    <>
-      <Header />
-      <main>{children}</main>
-      <Footer />
-    </>
-  </ThemeProvider>
-);
+const Layout: React.FC = ({ children }) => {
+  return (
+    <ThemeProvider theme={theme}>
+      <>
+        <Header />
+        <main>{children}</main>
+        <Footer />
+      </>
+    </ThemeProvider>
+  );
+};
 
 export default Layout;

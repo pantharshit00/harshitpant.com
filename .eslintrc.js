@@ -7,6 +7,8 @@ module.exports = {
     'airbnb',
     'plugin:@typescript-eslint/recommended',
     'prettier',
+    'prettier/react',
+    'prettier/@typescript-eslint',
   ],
   plugins: ['react', 'react-hooks', 'import', '@typescript-eslint', 'prettier'],
   parserOptions: {
@@ -16,6 +18,7 @@ module.exports = {
       impliedStrict: true,
     },
     sourceType: 'module',
+    project: path.resolve(__dirname, './tsconfig.json'),
   },
   env: {
     es6: true,
@@ -50,8 +53,6 @@ module.exports = {
     '@typescript-eslint/no-empty-interface': 'off',
     'react/jsx-props-no-spreading': 'off',
     '@typescript-eslint/explicit-module-boundary-types': 'off',
-    'no-use-before-define': 'off',
-    '@typescript-eslint/no-use-before-define': ['error'],
     '@typescript-eslint/no-unused-vars': [
       'error',
       {

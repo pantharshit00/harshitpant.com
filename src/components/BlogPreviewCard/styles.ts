@@ -34,7 +34,7 @@ export const Header = styled.header`
     ${media.bigDesktop`
       font-size: ${rem('28px')};
     `}
-    ${media.desktop`
+     ${media.desktop`
       font-size: ${rem('26px')};
     `}
      ${media.phablet`

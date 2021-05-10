@@ -11,6 +11,8 @@ const sizes = {
   tiny: 330,
 };
 
+type KeyofSizes = keyof typeof sizes;
+
 // iterate through the sizes and create a media template
 export const media = Object.entries(sizes).reduce<
   { [key in keyof typeof sizes]?: any }

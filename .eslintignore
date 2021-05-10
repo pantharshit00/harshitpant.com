@@ -1,6 +1,5 @@
 node_modules
 gatsby-*.js
-.eslintrc.js
 public
 .cache
 content
