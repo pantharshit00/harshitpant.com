@@ -1,6 +1,6 @@
 const ReactGA = require('react-ga');
 
-const GA_TRACKING_ID = 'UA-174368557-1';
+const GA_TRACKING_ID = 'G-BV35S0L52R';
 const GA_ADDRESS = 'https://harshitpant.com/met.js';
 const COLLECT_ADDRESS = 'https://met.drigger.workers.dev';
 
