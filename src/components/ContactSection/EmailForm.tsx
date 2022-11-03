@@ -87,7 +87,7 @@ const EmailForm: React.FC = () => {
   return (
     <EmailFormContainer>
       <h4>
-        <a href="mailto:hi@harshitpant.com">hi@harshitpant.com</a>
+        <a href="mailto:pantharshit00@gmail.com">pantharshit00@gmail.com</a>
       </h4>
       <div className="spacer" />
       <div>
