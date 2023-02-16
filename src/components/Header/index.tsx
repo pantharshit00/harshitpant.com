@@ -50,9 +50,6 @@ const Header: React.FC = () => {
             <L.NavA onClick={closeMenu} href="/#contact">
               Contact
             </L.NavA>
-            <L.NavA as={Link} to="/blogs" onClick={closeMenu}>
-              Blog
-            </L.NavA>
             <L.NavA onClick={closeMenu} href="/#about">
               About
             </L.NavA>
